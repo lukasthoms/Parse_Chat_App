@@ -38,14 +38,13 @@
              PFUser *user = [PFUser currentUser];
              NSMutableArray *newContactArray = user[@"contacts"];
              [newContactArray addObjectsFromArray:objects];
-             NSLog(@"newContactArray: %@", newContactArray);
              user[@"contacts"] = newContactArray;
-             NSLog(@"Current User Contacts %@", user[@"contacts"]);
+
 
              
              [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                  if (succeeded) {
-                     UIAlertController *saving = [UIAlertController alertControllerWithTitle:@"Adding Contact" message:nil preferredStyle:UIAlertControllerStyleAlert];
+                     UIAlertController *saving = [UIAlertController alertControllerWithTitle:@"Contact Added" message:nil preferredStyle:UIAlertControllerStyleAlert];
                      UIAlertAction *addMore = [UIAlertAction actionWithTitle:@"Add another." style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) { }];
                      [saving addAction:addMore];
                      UIAlertAction *done = [UIAlertAction actionWithTitle:@"I'm done." style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {

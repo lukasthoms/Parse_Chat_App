@@ -436,6 +436,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="8t3-Gq-M0B"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="8t3-Gq-M0B" id="RgZ-hJ-Vr8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACe-N0-gaA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -36,15 +36,15 @@
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
     
-    NSString *channelToAdd = [NSString stringWithFormat:@"user_lukas"];
-    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+//    NSString *channelToAdd = [NSString stringWithFormat:@"user_lukas"];
+//    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+//    
+//    NSLog(@"%@", currentInstallation.channels);
+//    
+//    [currentInstallation addUniqueObject:channelToAdd forKey:@"channels"];
+//    [currentInstallation saveEventually];
     
-    NSLog(@"%@", currentInstallation.channels);
-    
-    [currentInstallation addUniqueObject:channelToAdd forKey:@"channels"];
-    [currentInstallation saveEventually];
-    
-    NSLog(@"%@", currentInstallation.channels);
+//    NSLog(@"%@", currentInstallation.channels);
     
     
     
@@ -68,7 +68,8 @@
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [PFPush handlePush:userInfo];
+//    [PFPush handlePush:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NewMessage" object:self];
 }
 
 

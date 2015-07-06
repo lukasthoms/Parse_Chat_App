@@ -7,6 +7,8 @@
 //
 
 #import "ContactsViewController.h"
+#import "ChattrMessagesViewController.h"
+#import <Parse/Parse.h>
 
 
 @interface ContactsViewController ()
@@ -25,6 +27,19 @@
     self.userContacts = [self.currentUser objectForKey:@"contacts"];
     for (PFUser *contact in self.userContacts) {
         [contact fetchIfNeeded];
+        
+    
+    NSString *channelSpeller = [NSString stringWithFormat:@"user_%@", [[PFUser currentUser] email]];
+    NSCharacterSet *chs = [NSCharacterSet characterSetWithCharactersInString:@"'#%^&{}[]/~|\?.<,@"];
+    NSString *userChannel = [[channelSpeller componentsSeparatedByCharactersInSet:chs] componentsJoinedByString:@""];
+        NSLog(@"User channel to set: %@", userChannel);
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    
+    NSLog(@"Channels: %@", currentInstallation.channels);
+    
+    [currentInstallation addUniqueObject:userChannel forKey:@"channels"];
+    [currentInstallation saveEventually];
+    NSLog(@"Channels: %@", currentInstallation.channels);
     }
     // Do any additional setup after loading the view.
 }
@@ -70,14 +85,19 @@
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([[sender class] isEqual:[UITableViewCell class]]) {
+        UITableViewCell *sendingCell = sender;
+        NSIndexPath *indexPath = [self.contactsTableView indexPathForCell:sendingCell];
+        ChattrMessagesViewController *destination = [segue destinationViewController];
+        destination.recievingUser = self.userContacts[indexPath.row];
+    }
 }
-*/
+
 
 @end

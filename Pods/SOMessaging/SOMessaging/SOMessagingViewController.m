@@ -141,7 +141,6 @@
     SOMessage *message = self.conversation[indexPath.section][indexPath.row];
     int index = (int)[[self messages] indexOfObject:message];
     height = [self heightForMessageForIndex:index];
-    NSLog(@"%f",height);
 
     return height;
 }
@@ -232,7 +231,6 @@
 - (CGFloat)heightForMessageForIndex:(int)index
 {
     CGFloat height;
-    NSLog(@"%ld", (long)index );
     
 //    if (index <= [[self messages] count]) {
         SOMessage *message = [self messages][index];

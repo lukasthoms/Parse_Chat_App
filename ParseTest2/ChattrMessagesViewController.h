@@ -8,7 +8,10 @@
 
 #import "SOMessagingViewController.h"
 #import "ChattrMessage.h"
+#import <Parse/Parse.h>
 
 @interface ChattrMessagesViewController : SOMessagingViewController
+
+@property (strong, nonatomic) PFUser *recievingUser;
 
 @end

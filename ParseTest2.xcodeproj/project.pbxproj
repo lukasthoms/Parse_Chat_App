@@ -171,6 +171,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		801E5F9E1B4B1AC0000F5927 /* ChattrRoomViews */ = {
+			isa = PBXGroup;
+			children = (
+				804638341B49B1D300BDD39F /* ChattrNavigationViewController.h */,
+				804638351B49B1D300BDD39F /* ChattrNavigationViewController.m */,
+				804638371B4A037100BDD39F /* ChattrMessage.h */,
+				804638381B4A037100BDD39F /* ChattrMessage.m */,
+				8046383A1B4A053200BDD39F /* ChattrMessagesViewController.h */,
+				8046383B1B4A053200BDD39F /* ChattrMessagesViewController.m */,
+			);
+			name = ChattrRoomViews;
+			sourceTree = "<group>";
+		};
+		801E5F9F1B4B1AF3000F5927 /* ContactsViews */ = {
+			isa = PBXGroup;
+			children = (
+				8046382D1B49A0DE00BDD39F /* ContactsViewController.h */,
+				8046382E1B49A0DE00BDD39F /* ContactsViewController.m */,
+				804638311B49B0EF00BDD39F /* AddContactViewController.h */,
+				804638321B49B0EF00BDD39F /* AddContactViewController.m */,
+			);
+			name = ContactsViews;
+			sourceTree = "<group>";
+		};
+		801E5FA01B4B1B0B000F5927 /* Parse Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80D5436C1B421A67005B02BA /* Social.framework */,
+				80D5436A1B421A61005B02BA /* Accounts.framework */,
+				80D543681B421A57005B02BA /* libsqlite3.dylib */,
+				80D543661B421A46005B02BA /* libz.dylib */,
+				80D543641B421A3A005B02BA /* SystemConfiguration.framework */,
+				80D543621B421A30005B02BA /* StoreKit.framework */,
+				80D543601B421A29005B02BA /* Security.framework */,
+				80D5435E1B421A22005B02BA /* QuartzCore.framework */,
+				80D5435C1B421A1A005B02BA /* MobileCoreServices.framework */,
+				80D5435A1B421A13005B02BA /* CoreLocation.framework */,
+				80D543581B421A0D005B02BA /* CoreGraphics.framework */,
+				80D543561B421A07005B02BA /* CFNetwork.framework */,
+				80D543541B4219FF005B02BA /* AudioToolbox.framework */,
+				80D5436E1B421A86005B02BA /* Bolts.framework */,
+				80D5436F1B421A86005B02BA /* Parse.framework */,
+			);
+			name = "Parse Frameworks";
+			sourceTree = "<group>";
+		};
 		804638171B48122200BDD39F /* Test View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,21 +245,7 @@
 				80D5432D1B421749005B02BA /* ParseTest2 */,
 				80D543471B421749005B02BA /* ParseTest2Tests */,
 				80D5432C1B421749005B02BA /* Products */,
-				80D5436C1B421A67005B02BA /* Social.framework */,
-				80D5436A1B421A61005B02BA /* Accounts.framework */,
-				80D543681B421A57005B02BA /* libsqlite3.dylib */,
-				80D543661B421A46005B02BA /* libz.dylib */,
-				80D543641B421A3A005B02BA /* SystemConfiguration.framework */,
-				80D543621B421A30005B02BA /* StoreKit.framework */,
-				80D543601B421A29005B02BA /* Security.framework */,
-				80D5435E1B421A22005B02BA /* QuartzCore.framework */,
-				80D5435C1B421A1A005B02BA /* MobileCoreServices.framework */,
-				80D5435A1B421A13005B02BA /* CoreLocation.framework */,
-				80D543581B421A0D005B02BA /* CoreGraphics.framework */,
-				80D543561B421A07005B02BA /* CFNetwork.framework */,
-				80D543541B4219FF005B02BA /* AudioToolbox.framework */,
-				80D5436E1B421A86005B02BA /* Bolts.framework */,
-				80D5436F1B421A86005B02BA /* Parse.framework */,
+				801E5FA01B4B1B0B000F5927 /* Parse Frameworks */,
 				40F53C2D83C195171ED7FCC6 /* Pods */,
 				7A7252B29E2A351A44154075 /* Frameworks */,
 			);
@@ -236,16 +268,8 @@
 				804638171B48122200BDD39F /* Test View Controllers */,
 				80D543381B421749005B02BA /* Main.storyboard */,
 				804638301B49B0B300BDD39F /* Login Flow View Controllers */,
-				8046382D1B49A0DE00BDD39F /* ContactsViewController.h */,
-				8046382E1B49A0DE00BDD39F /* ContactsViewController.m */,
-				804638311B49B0EF00BDD39F /* AddContactViewController.h */,
-				804638321B49B0EF00BDD39F /* AddContactViewController.m */,
-				804638341B49B1D300BDD39F /* ChattrNavigationViewController.h */,
-				804638351B49B1D300BDD39F /* ChattrNavigationViewController.m */,
-				804638371B4A037100BDD39F /* ChattrMessage.h */,
-				804638381B4A037100BDD39F /* ChattrMessage.m */,
-				8046383A1B4A053200BDD39F /* ChattrMessagesViewController.h */,
-				8046383B1B4A053200BDD39F /* ChattrMessagesViewController.m */,
+				801E5F9F1B4B1AF3000F5927 /* ContactsViews */,
+				801E5F9E1B4B1AC0000F5927 /* ChattrRoomViews */,
 				80D5433B1B421749005B02BA /* Images.xcassets */,
 				80D5433D1B421749005B02BA /* LaunchScreen.xib */,
 				80D5432E1B421749005B02BA /* Supporting Files */,

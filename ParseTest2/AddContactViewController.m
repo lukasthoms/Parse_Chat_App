@@ -13,6 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *searchControl;
+
 @end
 
 @implementation AddContactViewController
@@ -29,11 +31,17 @@
 - (IBAction)addButtonTapped:(id)sender {
     
     PFQuery *phoneQuery = [PFUser query];
-    [phoneQuery whereKey:@"phone" equalTo:self.searchField.text];
+    if (self.searchControl.selectedSegmentIndex == 0) {
+        NSString *cleanPhone = [self phoneFormat:self.searchField.text];
+        [phoneQuery whereKey:@"phone" equalTo:cleanPhone];
+    } else if (self.searchControl.selectedSegmentIndex == 1) {
+        [phoneQuery whereKey:@"email" equalTo:self.searchField.text];
+    } else {
+        NSLog(@"That didn't work :(");
+    }
 
     [phoneQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
      {   NSLog(@"Error: %@", error.description);
-         NSLog(@"Objects: %@", objects);
          if (objects.count == 1) {
              PFUser *user = [PFUser currentUser];
              NSMutableArray *newContactArray = user[@"contacts"];
@@ -93,5 +101,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(NSString *) phoneFormat: (NSString*) userPhone {
+    
+//    NSString *channelSpeller = [NSString stringWithFormat:@"%@", userPhone];
+    NSCharacterSet *chs = [NSCharacterSet characterSetWithCharactersInString:@"'#%^&{}[]()/~|\?.<,@-"];
+    NSString *userChannel = [[userPhone componentsSeparatedByCharactersInSet:chs] componentsJoinedByString:@""];
+    return userChannel;
+    
+}
 
 @end

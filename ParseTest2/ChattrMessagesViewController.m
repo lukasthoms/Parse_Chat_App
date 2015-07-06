@@ -62,6 +62,13 @@
     
     NSMutableArray *convertedMessages = [self convertToSOMessageArray:queryResults];
     self.dataStore = convertedMessages;
+    if ([self.dataStore isEqual:[@[]mutableCopy]]) {
+        SOMessage *typeSomething = [[SOMessage alloc] init];
+        typeSomething.text = @"Send me a message!";
+        typeSomething.type = SOMessageTypeText;
+        typeSomething.fromMe = NO;
+        self.dataStore = [@[typeSomething]mutableCopy];
+    }
     [self refreshMessages];
     
     [[NSNotificationCenter defaultCenter] addObserver:self

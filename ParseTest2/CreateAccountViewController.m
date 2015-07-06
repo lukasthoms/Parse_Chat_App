@@ -68,7 +68,7 @@
         newUser.username = self.emailField.text;
         newUser.email = self.emailField.text;
         newUser.password = self.passwordField.text;
-        newUser[@"phone"] = self.phoneField.text;
+        newUser[@"phone"] = [self phoneFormat:self.phoneField.text];
         newUser[@"contacts"] = [@[] mutableCopy];
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
@@ -106,5 +106,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(NSString *) phoneFormat: (NSString*) userPhone {
+    
+    NSCharacterSet *chs = [NSCharacterSet characterSetWithCharactersInString:@"'#%^&{}[]()/~|\?.<,@-"];
+    NSString *userChannel = [[userPhone componentsSeparatedByCharactersInSet:chs] componentsJoinedByString:@""];
+    return userChannel;
+    
+}
 
 @end

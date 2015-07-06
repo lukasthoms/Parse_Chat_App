@@ -51,6 +51,7 @@
                      UIAlertAction *done = [UIAlertAction actionWithTitle:@"I'm done." style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
                          [self dismissViewControllerAnimated:YES completion:nil];
                      }];
+                     [saving addAction:done];
                      [self presentViewController:saving animated:YES completion:nil];
                      
                     

@@ -23,6 +23,9 @@
     self.contactsTableView.delegate = self;
     self.contactsTableView.dataSource = self;
     self.userContacts = [self.currentUser objectForKey:@"contacts"];
+    for (PFUser *contact in self.userContacts) {
+        [contact fetchIfNeeded];
+    }
     // Do any additional setup after loading the view.
 }
 

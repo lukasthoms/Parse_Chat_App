@@ -1,0 +1,10 @@
+PODS:
+  - SOMessaging (1.0.0)
+
+DEPENDENCIES:
+  - SOMessaging (~> 1.0.0)
+
+SPEC CHECKSUMS:
+  SOMessaging: 4d8cc091745b9dc5ab33c1fe8941fa44fc5c3d2c
+
+COCOAPODS: 0.37.1

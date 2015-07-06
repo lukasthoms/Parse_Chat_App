@@ -90,7 +90,7 @@
     
         NSError *error = nil;
         [PFUser logInWithUsername:self.emailField.text password:self.passwordField.text error:&error];
-        
+        NSLog(@"Error: %@", error.description);
         if (error != nil) {
             NSLog(@"Error: %@", error.description);
             NSString *errorString = [error userInfo][@"error"];

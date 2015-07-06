@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801E5F961B4A9EFD000F5927 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F8E1B4A9EFD000F5927 /* bubble.png */; };
+		801E5F971B4A9EFD000F5927 /* bubble@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F8F1B4A9EFD000F5927 /* bubble@2x.png */; };
+		801E5F981B4A9EFD000F5927 /* bubbleReceive.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F901B4A9EFD000F5927 /* bubbleReceive.png */; };
+		801E5F991B4A9EFD000F5927 /* bubbleReceive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F911B4A9EFD000F5927 /* bubbleReceive@2x.png */; };
+		801E5F9A1B4A9EFD000F5927 /* inputTextBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F921B4A9EFD000F5927 /* inputTextBG.png */; };
+		801E5F9B1B4A9EFD000F5927 /* inputTextBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F931B4A9EFD000F5927 /* inputTextBG@2x.png */; };
+		801E5F9C1B4A9EFD000F5927 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F941B4A9EFD000F5927 /* play_button.png */; };
+		801E5F9D1B4A9EFD000F5927 /* play_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F951B4A9EFD000F5927 /* play_button@2x.png */; };
 		804638201B4815D400BDD39F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046381F1B4815D400BDD39F /* SignInViewController.m */; };
 		804638231B4815EB00BDD39F /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 804638221B4815EB00BDD39F /* CreateAccountViewController.m */; };
 		8046382F1B49A0DE00BDD39F /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046382E1B49A0DE00BDD39F /* ContactsViewController.m */; };
 		804638331B49B0EF00BDD39F /* AddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 804638321B49B0EF00BDD39F /* AddContactViewController.m */; };
 		804638361B49B1D300BDD39F /* ChattrNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 804638351B49B1D300BDD39F /* ChattrNavigationViewController.m */; };
+		804638391B4A037100BDD39F /* ChattrMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 804638381B4A037100BDD39F /* ChattrMessage.m */; };
+		8046383C1B4A053200BDD39F /* ChattrMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046383B1B4A053200BDD39F /* ChattrMessagesViewController.m */; };
+		8046383E1B4A11E200BDD39F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8046383D1B4A11E200BDD39F /* MediaPlayer.framework */; };
 		80D543311B421749005B02BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D543301B421749005B02BA /* main.m */; };
 		80D543341B421749005B02BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D543331B421749005B02BA /* AppDelegate.m */; };
 		80D543371B421749005B02BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D543361B421749005B02BA /* ViewController.m */; };
@@ -35,6 +46,7 @@
 		80D543701B421A86005B02BA /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D5436E1B421A86005B02BA /* Bolts.framework */; };
 		80D543711B421A86005B02BA /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D5436F1B421A86005B02BA /* Parse.framework */; };
 		80D543741B42D5DB005B02BA /* ParseDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D543731B42D5DB005B02BA /* ParseDataTableViewController.m */; };
+		E1BD5EE45CE6BBAFC9FBF776 /* libPods-ParseTest2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B184E6AD61C446ACEA4417 /* libPods-ParseTest2.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +60,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76B184E6AD61C446ACEA4417 /* libPods-ParseTest2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParseTest2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		801E5F8E1B4A9EFD000F5927 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubble.png; path = ../../../Downloads/bubble.png; sourceTree = "<group>"; };
+		801E5F8F1B4A9EFD000F5927 /* bubble@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bubble@2x.png"; path = "../../../Downloads/bubble@2x.png"; sourceTree = "<group>"; };
+		801E5F901B4A9EFD000F5927 /* bubbleReceive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bubbleReceive.png; path = ../../../Downloads/bubbleReceive.png; sourceTree = "<group>"; };
+		801E5F911B4A9EFD000F5927 /* bubbleReceive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bubbleReceive@2x.png"; path = "../../../Downloads/bubbleReceive@2x.png"; sourceTree = "<group>"; };
+		801E5F921B4A9EFD000F5927 /* inputTextBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = inputTextBG.png; path = ../../../Downloads/inputTextBG.png; sourceTree = "<group>"; };
+		801E5F931B4A9EFD000F5927 /* inputTextBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "inputTextBG@2x.png"; path = "../../../Downloads/inputTextBG@2x.png"; sourceTree = "<group>"; };
+		801E5F941B4A9EFD000F5927 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play_button.png; path = ../../../Downloads/play_button.png; sourceTree = "<group>"; };
+		801E5F951B4A9EFD000F5927 /* play_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play_button@2x.png"; path = "../../../Downloads/play_button@2x.png"; sourceTree = "<group>"; };
 		8046381E1B4815D400BDD39F /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		8046381F1B4815D400BDD39F /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		804638211B4815EB00BDD39F /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
@@ -58,6 +79,11 @@
 		804638321B49B0EF00BDD39F /* AddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactViewController.m; sourceTree = "<group>"; };
 		804638341B49B1D300BDD39F /* ChattrNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChattrNavigationViewController.h; sourceTree = "<group>"; };
 		804638351B49B1D300BDD39F /* ChattrNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChattrNavigationViewController.m; sourceTree = "<group>"; };
+		804638371B4A037100BDD39F /* ChattrMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChattrMessage.h; sourceTree = "<group>"; };
+		804638381B4A037100BDD39F /* ChattrMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChattrMessage.m; sourceTree = "<group>"; };
+		8046383A1B4A053200BDD39F /* ChattrMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChattrMessagesViewController.h; sourceTree = "<group>"; };
+		8046383B1B4A053200BDD39F /* ChattrMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChattrMessagesViewController.m; sourceTree = "<group>"; };
+		8046383D1B4A11E200BDD39F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		80D5432B1B421749005B02BA /* ParseTest2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseTest2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D5432F1B421749005B02BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80D543301B421749005B02BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +114,8 @@
 		80D5436F1B421A86005B02BA /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ParseTest2.xcodeproj/Parse.framework; sourceTree = "<group>"; };
 		80D543721B42D5DB005B02BA /* ParseDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseDataTableViewController.h; sourceTree = "<group>"; };
 		80D543731B42D5DB005B02BA /* ParseDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseDataTableViewController.m; sourceTree = "<group>"; };
+		B12C8226379A42CEF7F5DDDE /* Pods-ParseTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseTest2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseTest2/Pods-ParseTest2.debug.xcconfig"; sourceTree = "<group>"; };
+		C31F6669DE0CCB7A84A56884 /* Pods-ParseTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseTest2.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseTest2/Pods-ParseTest2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8046383E1B4A11E200BDD39F /* MediaPlayer.framework in Frameworks */,
 				80D5436D1B421A67005B02BA /* Social.framework in Frameworks */,
 				80D5436B1B421A61005B02BA /* Accounts.framework in Frameworks */,
 				80D543691B421A58005B02BA /* libsqlite3.dylib in Frameworks */,
@@ -110,6 +139,7 @@
 				80D543571B421A07005B02BA /* CFNetwork.framework in Frameworks */,
 				80D543551B4219FF005B02BA /* AudioToolbox.framework in Frameworks */,
 				80D543701B421A86005B02BA /* Bolts.framework in Frameworks */,
+				E1BD5EE45CE6BBAFC9FBF776 /* libPods-ParseTest2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +153,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40F53C2D83C195171ED7FCC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B12C8226379A42CEF7F5DDDE /* Pods-ParseTest2.debug.xcconfig */,
+				C31F6669DE0CCB7A84A56884 /* Pods-ParseTest2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A7252B29E2A351A44154075 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8046383D1B4A11E200BDD39F /* MediaPlayer.framework */,
+				76B184E6AD61C446ACEA4417 /* libPods-ParseTest2.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		804638171B48122200BDD39F /* Test View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +214,8 @@
 				80D543541B4219FF005B02BA /* AudioToolbox.framework */,
 				80D5436E1B421A86005B02BA /* Bolts.framework */,
 				80D5436F1B421A86005B02BA /* Parse.framework */,
+				40F53C2D83C195171ED7FCC6 /* Pods */,
+				7A7252B29E2A351A44154075 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +242,10 @@
 				804638321B49B0EF00BDD39F /* AddContactViewController.m */,
 				804638341B49B1D300BDD39F /* ChattrNavigationViewController.h */,
 				804638351B49B1D300BDD39F /* ChattrNavigationViewController.m */,
+				804638371B4A037100BDD39F /* ChattrMessage.h */,
+				804638381B4A037100BDD39F /* ChattrMessage.m */,
+				8046383A1B4A053200BDD39F /* ChattrMessagesViewController.h */,
+				8046383B1B4A053200BDD39F /* ChattrMessagesViewController.m */,
 				80D5433B1B421749005B02BA /* Images.xcassets */,
 				80D5433D1B421749005B02BA /* LaunchScreen.xib */,
 				80D5432E1B421749005B02BA /* Supporting Files */,
@@ -202,6 +256,14 @@
 		80D5432E1B421749005B02BA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				801E5F8E1B4A9EFD000F5927 /* bubble.png */,
+				801E5F8F1B4A9EFD000F5927 /* bubble@2x.png */,
+				801E5F901B4A9EFD000F5927 /* bubbleReceive.png */,
+				801E5F911B4A9EFD000F5927 /* bubbleReceive@2x.png */,
+				801E5F921B4A9EFD000F5927 /* inputTextBG.png */,
+				801E5F931B4A9EFD000F5927 /* inputTextBG@2x.png */,
+				801E5F941B4A9EFD000F5927 /* play_button.png */,
+				801E5F951B4A9EFD000F5927 /* play_button@2x.png */,
 				80D5432F1B421749005B02BA /* Info.plist */,
 				80D543301B421749005B02BA /* main.m */,
 			);
@@ -232,9 +294,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80D5434E1B421749005B02BA /* Build configuration list for PBXNativeTarget "ParseTest2" */;
 			buildPhases = (
+				9EBE7A3F386DA372992AB534 /* Check Pods Manifest.lock */,
 				80D543271B421749005B02BA /* Sources */,
 				80D543281B421749005B02BA /* Frameworks */,
 				80D543291B421749005B02BA /* Resources */,
+				0540AFB6884C3F5B83CD5940 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,9 +370,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				801E5F9A1B4A9EFD000F5927 /* inputTextBG.png in Resources */,
+				801E5F991B4A9EFD000F5927 /* bubbleReceive@2x.png in Resources */,
 				80D5433A1B421749005B02BA /* Main.storyboard in Resources */,
+				801E5F961B4A9EFD000F5927 /* bubble.png in Resources */,
 				80D5433F1B421749005B02BA /* LaunchScreen.xib in Resources */,
+				801E5F971B4A9EFD000F5927 /* bubble@2x.png in Resources */,
+				801E5F9B1B4A9EFD000F5927 /* inputTextBG@2x.png in Resources */,
+				801E5F9C1B4A9EFD000F5927 /* play_button.png in Resources */,
 				80D5433C1B421749005B02BA /* Images.xcassets in Resources */,
+				801E5F981B4A9EFD000F5927 /* bubbleReceive.png in Resources */,
+				801E5F9D1B4A9EFD000F5927 /* play_button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +392,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0540AFB6884C3F5B83CD5940 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParseTest2/Pods-ParseTest2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EBE7A3F386DA372992AB534 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		80D543271B421749005B02BA /* Sources */ = {
@@ -334,7 +439,9 @@
 				8046382F1B49A0DE00BDD39F /* ContactsViewController.m in Sources */,
 				80D543741B42D5DB005B02BA /* ParseDataTableViewController.m in Sources */,
 				80D543341B421749005B02BA /* AppDelegate.m in Sources */,
+				8046383C1B4A053200BDD39F /* ChattrMessagesViewController.m in Sources */,
 				80D543311B421749005B02BA /* main.m in Sources */,
+				804638391B4A037100BDD39F /* ChattrMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +569,7 @@
 		};
 		80D5434F1B421749005B02BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B12C8226379A42CEF7F5DDDE /* Pods-ParseTest2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lukas Thoms (86AYLW44ZV)";
@@ -479,6 +587,7 @@
 		};
 		80D543501B421749005B02BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C31F6669DE0CCB7A84A56884 /* Pods-ParseTest2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lukas Thoms (86AYLW44ZV)";

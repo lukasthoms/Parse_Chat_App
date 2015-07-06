@@ -14,6 +14,9 @@
 @interface ContactsViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *contactsTableView;
+@property (strong, nonatomic) NSArray *contactRequests;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *requestButton;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 @end
 
@@ -41,11 +44,20 @@
     [currentInstallation saveEventually];
     NSLog(@"Channels: %@", currentInstallation.channels);
     }
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.contactsTableView addSubview:self.refreshControl];
+    [self.refreshControl addTarget:self action:@selector(refreshContactRequests) forControlEvents:UIControlEventValueChanged];
+    
     // Do any additional setup after loading the view.
 }
 
 -(void) viewWillAppear:(BOOL)animated {
+
+    [self refreshContactRequests];
+    
     [self.contactsTableView reloadData];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -99,6 +111,57 @@
     }
 }
 
+-(void) refreshContactRequests {
+    
+    PFUser *currentUser = [PFUser currentUser];
+    PFQuery *requestsQuery = [PFQuery queryWithClassName:@"contactRequest"];
+    [requestsQuery whereKey:@"requestTo" equalTo:currentUser];
+    [requestsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects) {
+            self.contactRequests = objects;
+            NSString *requestQueue = [NSString stringWithFormat:@"Requests(%lu)", (unsigned long)objects.count];
+            self.requestButton.title = requestQueue;
+        }
+    }];
+    [self.refreshControl endRefreshing];
+    [self.contactsTableView reloadData];
+}
+
+
+
+- (IBAction)requestsButtonTapped:(id)sender {
+    for (PFObject *contactRequest in self.contactRequests) {
+        PFUser *requestingUser = contactRequest[@"requestFrom"];
+        [requestingUser fetchIfNeeded];
+        PFUser *currentUser = [PFUser currentUser];
+        NSString *requestAlertTitle = [NSString stringWithFormat:@"%@ is requesting you add them as a contact.", requestingUser.email];
+        UIAlertController *requestChooser = [UIAlertController alertControllerWithTitle:requestAlertTitle
+                                                                                message:@"What would you like to do?"
+                                                                         preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *add = [UIAlertAction actionWithTitle:@"Add" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            NSArray *currentContacts = currentUser[@"contacts"];
+            NSMutableArray *mutableContacts = [currentContacts mutableCopy];
+            [mutableContacts addObject:requestingUser];
+            currentUser[@"contacts"] = mutableContacts;
+            [currentUser save];
+            [contactRequest deleteInBackground];
+            [self refreshContactRequests];
+            self.userContacts = [self.currentUser objectForKey:@"contacts"];
+            [self.contactsTableView reloadData];
+            
+            
+        }];
+        [requestChooser addAction:add];
+        
+        UIAlertAction *ignore = [UIAlertAction actionWithTitle:@"Ignore" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [contactRequest deleteInBackground];
+            [self refreshContactRequests];
+        }];
+        [requestChooser addAction:ignore];
+        [self presentViewController:requestChooser animated:YES completion:nil];
+    }
+    
+}
 
 
 

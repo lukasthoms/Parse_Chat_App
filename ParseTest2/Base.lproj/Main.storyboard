@@ -343,7 +343,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chattr" id="GNq-M5-02r">
-                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="hv6-ex-Ndg"/>
+                        <barButtonItem key="leftBarButtonItem" title="Requests" id="hv6-ex-Ndg">
+                            <connections>
+                                <action selector="requestsButtonTapped:" destination="so3-3n-2bD" id="8Fn-ed-Yn6"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="plu-b0-Mhy">
                             <connections>
                                 <segue destination="QhT-DX-P93" kind="modal" id="dca-HH-GeM"/>
@@ -352,6 +356,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contactsTableView" destination="TYP-HA-kjG" id="1yt-ZM-byi"/>
+                        <outlet property="requestButton" destination="hv6-ex-Ndg" id="axF-B9-OGc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zE8-Og-0wY" userLabel="First Responder" sceneMemberID="firstResponder"/>

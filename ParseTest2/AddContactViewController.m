@@ -47,7 +47,12 @@
              NSMutableArray *newContactArray = user[@"contacts"];
              [newContactArray addObjectsFromArray:objects];
              user[@"contacts"] = newContactArray;
-
+             PFObject *contactRequest = [PFObject objectWithClassName:@"contactRequest"];
+             contactRequest[@"requestFrom"] = user;
+             contactRequest[@"requestTo"] = objects[0];
+             contactRequest[@"sentTo"] = [self channelFormat:user.email];
+             contactRequest[@"sentFrom"] = user.email;
+             [contactRequest saveInBackground];
 
              
              [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -107,6 +112,15 @@
 //    NSString *channelSpeller = [NSString stringWithFormat:@"%@", userPhone];
     NSCharacterSet *chs = [NSCharacterSet characterSetWithCharactersInString:@"'#%^&{}[]()/~|\?.<,@-"];
     NSString *userChannel = [[userPhone componentsSeparatedByCharactersInSet:chs] componentsJoinedByString:@""];
+    return userChannel;
+    
+}
+
+-(NSString *) channelFormat: (NSString*) userEmail {
+    
+    NSString *channelSpeller = [NSString stringWithFormat:@"user_%@", userEmail];
+    NSCharacterSet *chs = [NSCharacterSet characterSetWithCharactersInString:@"'#%^&{}[]/~|\?.<,@"];
+    NSString *userChannel = [[channelSpeller componentsSeparatedByCharactersInSet:chs] componentsJoinedByString:@""];
     return userChannel;
     
 }

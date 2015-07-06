@@ -70,6 +70,7 @@
         newUser.password = self.passwordField.text;
         newUser[@"phone"] = [self phoneFormat:self.phoneField.text];
         newUser[@"contacts"] = [@[] mutableCopy];
+        newUser[@"contactRequests"] = [@[] mutableCopy];
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
                 [self dismissViewControllerAnimated:YES completion:nil];

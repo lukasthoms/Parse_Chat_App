@@ -39,6 +39,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+    //toggle through UITextFields
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     
     NSArray *textFields = @[self.emailField, self.passwordField, self.repeatPassword, self.phoneField];
@@ -55,14 +56,18 @@
         [[textFields objectAtIndex:(currentPosistion+1)] becomeFirstResponder];
     } else {
         [textField resignFirstResponder];
+        [self saveAccountTapped:nil];
     }
     
     return YES;
 }
 
+    //When save account tapped, check dependencies then create new PFUser
 - (IBAction)saveAccountTapped:(id)sender {
+    
     UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
     }];
+    
     if (self.emailField.text.length > 0 && self.passwordField.text.length > 0 && self.phoneField.text.length > 0 && [self.passwordField.text isEqual:self.repeatPassword.text]) {
         PFUser *newUser = [PFUser user];
         newUser.username = self.emailField.text;

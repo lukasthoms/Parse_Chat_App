@@ -52,7 +52,13 @@
              contactRequest[@"requestTo"] = objects[0];
              contactRequest[@"sentTo"] = [self channelFormat:user.email];
              contactRequest[@"sentFrom"] = user.email;
-             [contactRequest saveInBackground];
+             [contactRequest save];
+             PFObject *contactRequestMessage = [PFObject objectWithClassName:@"Message"];
+             contactRequestMessage[@"content"] = [NSString stringWithFormat:@"would like to add you as a contact."];
+             contactRequestMessage[@"sendingUserEmail"] = user.email;
+             contactRequestMessage[@"sentTo"] = [self channelFormat:[objects[0] email]];
+             [contactRequestMessage saveInBackground];
+             
 
              
              [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

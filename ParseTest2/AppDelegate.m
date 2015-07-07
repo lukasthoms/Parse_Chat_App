@@ -70,12 +70,11 @@
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
 //    [PFPush handlePush:userInfo];
     NSLog(@"%@", userInfo);
-    if ([[[userInfo objectForKey:@"aps"] objectForKey:@"alert"] containsString:@"Contact request:"]) {
+    if ([[[userInfo objectForKey:@"aps"] objectForKey:@"alert"] containsString:@"would like to add you as a contact."]) {
         [PFPush handlePush:userInfo];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"NewContact" object:self];
-    } else {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"NewMessage" object:self];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"NewContact" object:self];
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NewMessage" object:self];
 }
 
 

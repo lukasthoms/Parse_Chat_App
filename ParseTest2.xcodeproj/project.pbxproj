@@ -15,6 +15,7 @@
 		801E5F9B1B4A9EFD000F5927 /* inputTextBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F931B4A9EFD000F5927 /* inputTextBG@2x.png */; };
 		801E5F9C1B4A9EFD000F5927 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F941B4A9EFD000F5927 /* play_button.png */; };
 		801E5F9D1B4A9EFD000F5927 /* play_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F951B4A9EFD000F5927 /* play_button@2x.png */; };
+		801E5FA31B4B8596000F5927 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 801E5FA21B4B8596000F5927 /* ContactTableViewCell.m */; };
 		804638201B4815D400BDD39F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046381F1B4815D400BDD39F /* SignInViewController.m */; };
 		804638231B4815EB00BDD39F /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 804638221B4815EB00BDD39F /* CreateAccountViewController.m */; };
 		8046382F1B49A0DE00BDD39F /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046382E1B49A0DE00BDD39F /* ContactsViewController.m */; };
@@ -69,6 +70,8 @@
 		801E5F931B4A9EFD000F5927 /* inputTextBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "inputTextBG@2x.png"; path = "../../../Downloads/inputTextBG@2x.png"; sourceTree = "<group>"; };
 		801E5F941B4A9EFD000F5927 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play_button.png; path = ../../../Downloads/play_button.png; sourceTree = "<group>"; };
 		801E5F951B4A9EFD000F5927 /* play_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play_button@2x.png"; path = "../../../Downloads/play_button@2x.png"; sourceTree = "<group>"; };
+		801E5FA11B4B8596000F5927 /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
+		801E5FA21B4B8596000F5927 /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
 		8046381E1B4815D400BDD39F /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		8046381F1B4815D400BDD39F /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		804638211B4815EB00BDD39F /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				8046382E1B49A0DE00BDD39F /* ContactsViewController.m */,
 				804638311B49B0EF00BDD39F /* AddContactViewController.h */,
 				804638321B49B0EF00BDD39F /* AddContactViewController.m */,
+				801E5FA11B4B8596000F5927 /* ContactTableViewCell.h */,
+				801E5FA21B4B8596000F5927 /* ContactTableViewCell.m */,
 			);
 			name = ContactsViews;
 			sourceTree = "<group>";
@@ -463,6 +468,7 @@
 				8046382F1B49A0DE00BDD39F /* ContactsViewController.m in Sources */,
 				80D543741B42D5DB005B02BA /* ParseDataTableViewController.m in Sources */,
 				80D543341B421749005B02BA /* AppDelegate.m in Sources */,
+				801E5FA31B4B8596000F5927 /* ContactTableViewCell.m in Sources */,
 				8046383C1B4A053200BDD39F /* ChattrMessagesViewController.m in Sources */,
 				80D543311B421749005B02BA /* main.m in Sources */,
 				804638391B4A037100BDD39F /* ChattrMessage.m in Sources */,

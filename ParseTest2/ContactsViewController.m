@@ -9,6 +9,7 @@
 #import "ContactsViewController.h"
 #import "ChattrMessagesViewController.h"
 #import <Parse/Parse.h>
+#import "ContactTableViewCell.h"
 
 
 @interface ContactsViewController ()
@@ -30,21 +31,8 @@
     self.userContacts = [self.currentUser objectForKey:@"contacts"];
     for (PFUser *contact in self.userContacts) {
         [contact fetchIfNeeded];
-        
-    
-    NSString *channelSpeller = [NSString stringWithFormat:@"user_%@", [[PFUser currentUser] email]];
-    NSCharacterSet *chs = [NSCharacterSet characterSetWithCharactersInString:@"'#%^&{}[]/~|\?.<,@"];
-    NSString *userChannel = [[channelSpeller componentsSeparatedByCharactersInSet:chs] componentsJoinedByString:@""];
-        NSLog(@"User channel to set: %@", userChannel);
-    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    
-    NSLog(@"Channels: %@", currentInstallation.channels);
-    
-    [currentInstallation addUniqueObject:userChannel forKey:@"channels"];
-    [currentInstallation saveEventually];
-    NSLog(@"Channels: %@", currentInstallation.channels);
     }
-    
+
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.contactsTableView addSubview:self.refreshControl];
     [self.refreshControl addTarget:self action:@selector(refreshContactRequests) forControlEvents:UIControlEventValueChanged];
@@ -53,6 +41,24 @@
 }
 
 -(void) viewWillAppear:(BOOL)animated {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveTestNotification:)
+                                                 name:@"NewMessage"
+                                               object:nil];
+    
+    
+    NSString *channelSpeller = [NSString stringWithFormat:@"user_%@", [[PFUser currentUser] email]];
+    NSCharacterSet *chs = [NSCharacterSet characterSetWithCharactersInString:@"'#%^&{}[]/~|\?.<,@"];
+    NSString *userChannel = [[channelSpeller componentsSeparatedByCharactersInSet:chs] componentsJoinedByString:@""];
+    NSLog(@"User channel to set: %@", userChannel);
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    
+    NSLog(@"Channels: %@", currentInstallation.channels);
+    
+    [currentInstallation addUniqueObject:userChannel forKey:@"channels"];
+    [currentInstallation saveEventually];
+    NSLog(@"Channels: %@", currentInstallation.channels);
 
     [self refreshContactRequests];
     
@@ -88,8 +94,18 @@
         cell.textLabel.text = @"Tap the + to add contacts.";
         return cell;
     } else {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"contactCell" forIndexPath:indexPath];
-        cell.textLabel.text = [self.userContacts[indexPath.row] email];
+        ContactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"contactCell" forIndexPath:indexPath];
+        cell.contactEmailLabel.text = [self.userContacts[indexPath.row] email];
+        PFQuery *messagesQuery = [PFQuery queryWithClassName:@"Message"];
+        NSString *roomIdentifier = [self getRoomIdentifier:self.userContacts[indexPath.row]];
+        [messagesQuery whereKey:@"roomIdentifier" equalTo:roomIdentifier];
+        [messagesQuery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+            if (array) {
+                if ([[[array lastObject] objectForKey:@"read"] isEqualToString:@"no"]) {
+                    cell.puppyLabel.text = @"🐶";
+                }
+            }
+        }];
         return cell;
     }
 
@@ -103,8 +119,8 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([[sender class] isEqual:[UITableViewCell class]]) {
-        UITableViewCell *sendingCell = sender;
+    if ([[sender class] isEqual:[ContactTableViewCell class]]) {
+        ContactTableViewCell *sendingCell = sender;
         NSIndexPath *indexPath = [self.contactsTableView indexPathForCell:sendingCell];
         ChattrMessagesViewController *destination = [segue destinationViewController];
         destination.recievingUser = self.userContacts[indexPath.row];
@@ -112,6 +128,8 @@
 }
 
 -(void) refreshContactRequests {
+    
+    
     
     PFUser *currentUser = [PFUser currentUser];
     PFQuery *requestsQuery = [PFQuery queryWithClassName:@"contactRequest"];
@@ -161,6 +179,28 @@
         [self presentViewController:requestChooser animated:YES completion:nil];
     }
     
+}
+
+- (void) receiveTestNotification:(NSNotification *) notification
+{
+    // [notification name] should always be @"TestNotification"
+    // unless you use this method for observation of other notifications
+    // as well.
+    if ([[notification name] isEqualToString:@"NewMessage"]) {
+        [self refreshContactRequests];
+    }
+    
+}
+
+-(NSString *)getRoomIdentifier: (PFUser *) receivingUser {
+    
+    NSSortDescriptor *sorter = [[NSSortDescriptor alloc] initWithKey:@"email" ascending:YES];
+    NSArray *users = @[receivingUser, [PFUser currentUser]];
+    NSArray *sortedUsers = [users sortedArrayUsingDescriptors:@[sorter]];
+    PFUser *firstUser = sortedUsers[0];
+    PFUser *secondUser = sortedUsers[1];
+    NSString *roomIdentifier = [NSString stringWithFormat:@"%@-%@", firstUser.email, secondUser.email];
+    return roomIdentifier;
 }
 
 

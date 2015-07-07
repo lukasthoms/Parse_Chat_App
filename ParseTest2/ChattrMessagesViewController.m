@@ -41,15 +41,6 @@
     message1.type = SOMessageTypeText;
     NSMutableArray *testMessages = [@[message1] mutableCopy];
  */
-//    PFQuery *messagesQuery = [PFQuery queryWithClassName:@"Message"];
-//    [messagesQuery whereKey:@"roomIdentifier" equalTo:self.roomIdentifier];
-//    NSError *error = nil;
-//    NSArray *queryResults = [messagesQuery findObjects:&error];
-//
-//    NSMutableArray *convertedMessages = [self convertToSOMessageArray:queryResults];
-//    self.dataStore = convertedMessages;
-//    [self refreshMessages];
-
 
 }
 
@@ -70,6 +61,21 @@
         self.dataStore = [@[typeSomething]mutableCopy];
     }
     [self refreshMessages];
+    
+    PFQuery *unreadQuery = [PFQuery queryWithClassName:@"Message"];
+    [unreadQuery whereKey:@"read" equalTo:@"no"];
+    [unreadQuery whereKey:@"roomIdentifier" equalTo:self.roomIdentifier];
+    [unreadQuery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+        if (array) {
+            for (PFObject *message in array) {
+                message[@"read"] = @"yes";
+                [message saveInBackground];
+            }
+        } else {
+            NSLog(@"Read Messages Error: %@", error.description);
+        }
+    }];
+    
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveTestNotification:)
@@ -126,6 +132,7 @@
     messageObject[@"recievingUserEmail"] = self.recievingUser.email;
     messageObject[@"roomIdentifier"] = self.roomIdentifier;
     messageObject[@"sentTo"] = [self channelFormat:self.recievingUser.email];
+    messageObject[@"read"] = @"no";
     NSLog(@"%@", [self channelFormat:self.recievingUser.email]);
     [messageObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {

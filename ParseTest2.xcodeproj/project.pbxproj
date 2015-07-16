@@ -16,6 +16,7 @@
 		801E5F9C1B4A9EFD000F5927 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F941B4A9EFD000F5927 /* play_button.png */; };
 		801E5F9D1B4A9EFD000F5927 /* play_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 801E5F951B4A9EFD000F5927 /* play_button@2x.png */; };
 		801E5FA31B4B8596000F5927 /* ContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 801E5FA21B4B8596000F5927 /* ContactTableViewCell.m */; };
+		802F5DA81B57FE3D003627C3 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 802F5DA71B57FE3D003627C3 /* Constants.m */; };
 		804638201B4815D400BDD39F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046381F1B4815D400BDD39F /* SignInViewController.m */; };
 		804638231B4815EB00BDD39F /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 804638221B4815EB00BDD39F /* CreateAccountViewController.m */; };
 		8046382F1B49A0DE00BDD39F /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8046382E1B49A0DE00BDD39F /* ContactsViewController.m */; };
@@ -72,6 +73,8 @@
 		801E5F951B4A9EFD000F5927 /* play_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play_button@2x.png"; path = "../../../Downloads/play_button@2x.png"; sourceTree = "<group>"; };
 		801E5FA11B4B8596000F5927 /* ContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewCell.h; sourceTree = "<group>"; };
 		801E5FA21B4B8596000F5927 /* ContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewCell.m; sourceTree = "<group>"; };
+		802F5DA61B57FE3D003627C3 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		802F5DA71B57FE3D003627C3 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		8046381E1B4815D400BDD39F /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		8046381F1B4815D400BDD39F /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		804638211B4815EB00BDD39F /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 			children = (
 				80D543321B421749005B02BA /* AppDelegate.h */,
 				80D543331B421749005B02BA /* AppDelegate.m */,
+				802F5DA61B57FE3D003627C3 /* Constants.h */,
+				802F5DA71B57FE3D003627C3 /* Constants.m */,
 				804638171B48122200BDD39F /* Test View Controllers */,
 				80D543381B421749005B02BA /* Main.storyboard */,
 				804638301B49B0B300BDD39F /* Login Flow View Controllers */,
@@ -467,6 +472,7 @@
 				804638231B4815EB00BDD39F /* CreateAccountViewController.m in Sources */,
 				8046382F1B49A0DE00BDD39F /* ContactsViewController.m in Sources */,
 				80D543741B42D5DB005B02BA /* ParseDataTableViewController.m in Sources */,
+				802F5DA81B57FE3D003627C3 /* Constants.m in Sources */,
 				80D543341B421749005B02BA /* AppDelegate.m in Sources */,
 				801E5FA31B4B8596000F5927 /* ContactTableViewCell.m in Sources */,
 				8046383C1B4A053200BDD39F /* ChattrMessagesViewController.m in Sources */,

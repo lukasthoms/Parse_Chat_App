@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.passwordField.secureTextEntry = YES;
+    self.passwordField.delegate = self;
     self.emailField.delegate = self;
     self.emailField.delegate = self;
 
@@ -43,6 +44,8 @@
         [self.passwordField becomeFirstResponder];
     } else {
         [textField resignFirstResponder];
+        
+        
     }
     return YES;
 }

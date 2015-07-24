@@ -99,8 +99,12 @@
         [messagesQuery whereKey:@"roomIdentifier" equalTo:roomIdentifier];
         [messagesQuery findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
             if (array) {
-                if ([[[array lastObject] objectForKey:@"read"] isEqualToString:@"no"]) {
-                    cell.puppyLabel.text = @"🐶";
+                if ([[[array lastObject] objectForKey:@"read"] isEqualToString:@"no"] &&
+                    ![[[array lastObject] objectForKey:@"sendingUserEmail"] isEqual:[PFUser currentUser].email]) {
+                        cell.puppyLabel.hidden = NO;
+                        cell.puppyLabel.text = @"🐶";
+                } else {
+                    cell.puppyLabel.hidden = YES;
                 }
             }
         }];

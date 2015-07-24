@@ -107,10 +107,10 @@
     
     // Customize balloon
     if (message.fromMe) {
-        cell.contentInsets = UIEdgeInsetsMake(0, 3.0f, 0, 0); //Move content for 3 pt. to right
+        cell.contentInsets = UIEdgeInsetsMake(0, 0, 0, 4); //Move content for 4 pt. to right
         cell.textView.textColor = [UIColor blackColor];
     } else {
-        cell.contentInsets = UIEdgeInsetsMake(0, 0, 0, 3.0f); //Move content for 3 pt. to left
+        cell.contentInsets = UIEdgeInsetsMake(0, 4, 0, 0); //Move content for 4 pt. to left
         cell.textView.textColor = [UIColor whiteColor];
         
     }

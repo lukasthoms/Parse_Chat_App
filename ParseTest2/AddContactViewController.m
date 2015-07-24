@@ -8,6 +8,7 @@
 
 #import "AddContactViewController.h"
 #import <Parse/Parse.h>
+#import <MBProgressHUD.h>
 
 @interface AddContactViewController ()
 
@@ -29,7 +30,8 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)addButtonTapped:(id)sender {
-    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Looking up.";
     // check for which search parameter is selected and set the parse query as such
     PFQuery *phoneQuery = [PFUser query];
     if (self.searchControl.selectedSegmentIndex == 0) {
@@ -73,6 +75,9 @@
                          [self dismissViewControllerAnimated:YES completion:nil];
                      }];
                      [saving addAction:done];
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         [hud hide:YES];
+                     });
                      [self presentViewController:saving animated:YES completion:nil];
                      
                     
@@ -85,6 +90,9 @@
                                                                   style:UIAlertActionStyleDefault
                                                                 handler:^(UIAlertAction *action) { }];
                      [failedSave addAction:ok];
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         [hud hide:YES];
+                     });
                      [self presentViewController:failedSave animated:YES completion:nil];
                      
                  }
@@ -97,6 +105,9 @@
                                                             style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction *action) { }];
              [failedSearch addAction:cool];
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 [hud hide:YES];
+             });
              [self presentViewController:failedSearch animated:YES completion:nil];
              
          }

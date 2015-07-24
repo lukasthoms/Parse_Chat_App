@@ -10,6 +10,7 @@
 #import "ContactsViewController.h"
 #import <Parse/Parse.h>
 #import "ChattrNavigationViewController.h"
+#import <MBProgressHUD.h>
 
 
 @interface SignInViewController ()
@@ -44,7 +45,7 @@
         [self.passwordField becomeFirstResponder];
     } else {
         [textField resignFirstResponder];
-        
+        [self.loginButton sendActionsForControlEvents:UIControlEventTouchUpInside];
         
     }
     return YES;
@@ -64,12 +65,15 @@
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Logging in...";
     BOOL isValid = YES;
     if ([sender isEqual:self.loginButton]) {
         // perform Parse sign in and segue if successful, else fail and present alert
         NSError *error = nil;
         [PFUser logInWithUsername:self.emailField.text password:self.passwordField.text error:&error];
         NSLog(@"Error: %@", error.description);
+        [hud hide:YES];
         if (error != nil) {
             NSLog(@"Error: %@", error.description);
             NSString *errorString = [error userInfo][@"error"];

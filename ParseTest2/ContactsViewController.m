@@ -94,6 +94,8 @@
     } else {
         ContactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"contactCell" forIndexPath:indexPath];
         cell.contactEmailLabel.text = [self.userContacts[indexPath.row] email];
+        
+        // find last message in each conversation, and check if you have a new unread messages. If so, display puppy.
         PFQuery *messagesQuery = [PFQuery queryWithClassName:@"Message"];
         NSString *roomIdentifier = [self getRoomIdentifier:self.userContacts[indexPath.row]];
         [messagesQuery whereKey:@"roomIdentifier" equalTo:roomIdentifier];
@@ -139,7 +141,7 @@
     [requestsQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (objects) {
             self.contactRequests = objects;
-            NSString *requestQueue = [NSString stringWithFormat:@"Requests(%lu)", (unsigned long)objects.count];
+            NSString *requestQueue = [NSString stringWithFormat:@"Requests (%lu)", (unsigned long)objects.count];
             self.requestButton.title = requestQueue;
         }
     }];

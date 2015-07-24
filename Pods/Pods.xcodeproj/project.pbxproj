@@ -7,235 +7,332 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		004F418CA47734CD80A26795 /* SOMessagingDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 130657F935A170ECA7B5FE51 /* SOMessagingDataSource.h */; };
-		07035FFEFBE05390D5167894 /* SOMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B1B44BF7B354F2FD168DA6 /* SOMessageCell.m */; };
-		1A40E276C784E2AE9B483CCD /* SOMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = FB6495E48DAAF0E423FEC117 /* SOMessage.h */; };
-		1BF97087C98655213A77F6D9 /* SOMessagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8D7BAB1AB49A7C07EC7AE4 /* SOMessagingViewController.m */; };
-		1C9F17A9ED8095DB0CBF7ABA /* UINavigationController+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 45DF79D08FACA54063AD0389 /* UINavigationController+Rotation.m */; };
-		3C80D49566FF5789D92BD2C4 /* NSString+Calculation.h in Headers */ = {isa = PBXBuildFile; fileRef = 851E16E0249D28B8B64CD3D2 /* NSString+Calculation.h */; };
-		3E5F5AA7217A7C0A11483ED1 /* SOMessageType.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DDBA9103D817BF1B31FE0F2 /* SOMessageType.h */; };
-		46274FCC578590CBDFBFAE8A /* SOImageBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4450BFE0DCB1881F79C08945 /* SOImageBrowserView.m */; };
-		495BBDAE78568438D5265850 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8010CEDE35C88D1A9D228317 /* Foundation.framework */; };
-		4A1765662D1F365E72EF3F36 /* NSString+Calculation.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BD10B72772C1264D135BC3 /* NSString+Calculation.m */; };
-		53B0D058B9AA9C753B29D1AF /* Pods-ParseTest2-SOMessaging-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B095391C3E1EED4C542B39FD /* Pods-ParseTest2-SOMessaging-dummy.m */; };
-		78355E77E6D7C0FE314BC4ED /* SOMessageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F89117FC297ED7D5F2B60636 /* SOMessageCell.h */; };
-		893F953FD967E013DEEB6903 /* SOMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE121029915B1280C11F37A /* SOMessage.m */; };
-		89B0430AD1E73C264EDFB977 /* SOMessagingDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A70137A1AB417C056DE2FD0 /* SOMessagingDelegate.h */; };
-		8FEDFC9B07F2509BEBBE0FC5 /* SOPlaceholderedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3184A2F4F5C63FB01CDAB278 /* SOPlaceholderedTextView.m */; };
-		A2CAF173315500F8A44B00F9 /* SOMessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96999A1BD960257FD340A545 /* SOMessageInputView.m */; };
-		B0AAA889454461C55A1B5FFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8010CEDE35C88D1A9D228317 /* Foundation.framework */; };
-		B21813B09A027515207BA757 /* SOPlaceholderedTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 769FCB02076E4465396BDDDA /* SOPlaceholderedTextView.h */; };
-		D997E6BD68533108BCABBE3E /* SOImageBrowserView.h in Headers */ = {isa = PBXBuildFile; fileRef = A0F1CB0A18D30B2D3D9746CE /* SOImageBrowserView.h */; };
-		E3467223F166D3F128C0F7E0 /* SOMessagingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 503F19154B6EC39746AA08BB /* SOMessagingViewController.h */; };
-		ED2FE37127F430FC047317D0 /* Pods-ParseTest2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A08F0F8AFAB90B3E8F50269 /* Pods-ParseTest2-dummy.m */; };
-		F5C1ABD850B05CCB8C84F752 /* SOMessageInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = B642FF08137188F2C60AB2D8 /* SOMessageInputView.h */; };
-		FD24707B0A8E2EF50F0A1511 /* UINavigationController+Rotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B1E4FDBD8BCF10493FC5272 /* UINavigationController+Rotation.h */; };
+		0FAF81F73D6674D531ACDAC4 /* Pods-ParseTest2-MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B84E9F2E569349E77A9D80F6 /* Pods-ParseTest2-MBProgressHUD-dummy.m */; };
+		20EE1C465A9D11A733B3B410 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C5A3A974B0303BF55BB8CA /* Foundation.framework */; };
+		238D3A1B78E93A77F32D7FB9 /* SOMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = E1B9FA1EDE1656D9CED32709 /* SOMessage.m */; };
+		2C0C02F737C0ACD3EAD64EDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C5A3A974B0303BF55BB8CA /* Foundation.framework */; };
+		37423C2EB15A6477C7C78B74 /* SOPlaceholderedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA346872EAB1D38191F3FC83 /* SOPlaceholderedTextView.m */; };
+		3A956E896F82C1F9180FC623 /* SOMessageCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C758B35140FEA67E4762AD4 /* SOMessageCell.h */; };
+		447B0B850B7E885361641E10 /* SOImageBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = C77BF831417EA97EC2332607 /* SOImageBrowserView.m */; };
+		5AAA6EF400C72F6B51FBD8DC /* SOMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACB07828DE094DD9A9C0A3E /* SOMessageCell.m */; };
+		5E08840642D7EA5E0E9843C5 /* NSString+Calculation.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8BD850F09B50923586F99E /* NSString+Calculation.m */; };
+		65FA589AF11E3BF5D4143501 /* SOMessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 020299524DE2ED9FEB5F9D74 /* SOMessageInputView.m */; };
+		7BF2A37062951CE6E6C13B7F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 11192F5BB291D5E83D839AD0 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7E93F3FE848DD7E68F568C2B /* SOMessageType.h in Headers */ = {isa = PBXBuildFile; fileRef = D7D97A841706823B5BA4F1E4 /* SOMessageType.h */; };
+		AB267B76B2ECF822D5034EC5 /* SOMessagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2CED7CD85C2EB8EDEE3A93 /* SOMessagingViewController.m */; };
+		B463CED0E08C9A3F4558ACE4 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = D60D863953677E220F5816AB /* MBProgressHUD.h */; };
+		B49A4268412953630610CC93 /* SOImageBrowserView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E041D9105B16206F77701B4 /* SOImageBrowserView.h */; };
+		B9311439286A40908E456F61 /* SOMessagingDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A27CB855D8E53E52216C091F /* SOMessagingDataSource.h */; };
+		BD5826845F9F765A569E4379 /* Pods-ParseTest2-SOMessaging-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A243973AD2525F59A5C0D7 /* Pods-ParseTest2-SOMessaging-dummy.m */; };
+		C251692DF7EA79E119494F99 /* SOMessagingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B7C9156D645C32EA86D105FA /* SOMessagingViewController.h */; };
+		C5985D2B4CDA55F85BA09557 /* SOMessagingDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 279A2DF4D3106ECC00F800E5 /* SOMessagingDelegate.h */; };
+		D99206944BEE56ABA4123010 /* SOMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A7C9BDAC1A62A5DA6494899 /* SOMessage.h */; };
+		D99CC2753526392EED4AC7E2 /* Pods-ParseTest2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C39046902DD17BDDCB74290 /* Pods-ParseTest2-dummy.m */; };
+		DDBC59F0DCD3676FFDF89FA9 /* UINavigationController+Rotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C2755501709D520E64A52 /* UINavigationController+Rotation.m */; };
+		E7B24391B86C43DF44AFDF24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C5A3A974B0303BF55BB8CA /* Foundation.framework */; };
+		E887D6684CE80414A814E621 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C5D65D9BC36C8B7BCFA8C0 /* CoreGraphics.framework */; };
+		E99F6E2E38CE0680421A4FB4 /* SOPlaceholderedTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = D3D60581D96CFD99AFCC832E /* SOPlaceholderedTextView.h */; };
+		FEF53A48A456FE6FEEA99AAB /* SOMessageInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 631EAD54EC0C7D4ACDA37B42 /* SOMessageInputView.h */; };
+		FF221ED042186BF88D2A354C /* UINavigationController+Rotation.h in Headers */ = {isa = PBXBuildFile; fileRef = F749D8EBFAA976DBDB03DD00 /* UINavigationController+Rotation.h */; };
+		FFC622725E8C41D08F0619C1 /* NSString+Calculation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2656360A40EB8C850B036B32 /* NSString+Calculation.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3233B62FEA9F0B36C8196755 /* PBXContainerItemProxy */ = {
+		7B3025BB683C1A51D54D76D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F274929AC54E5CC9B5BD14AF /* Project object */;
+			containerPortal = 221E1492510A5B0F1F81ECB0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0D19575BB4181B8C661161A1;
+			remoteGlobalIDString = 0ACFDC1EB2A8CC7405B00620;
+			remoteInfo = "Pods-ParseTest2-MBProgressHUD";
+		};
+		B259A7582A6C6B50E0E9A0DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 221E1492510A5B0F1F81ECB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB6AD343FB7486CADF25EBF0;
 			remoteInfo = "Pods-ParseTest2-SOMessaging";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05BD10B72772C1264D135BC3 /* NSString+Calculation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Calculation.m"; path = "SOMessaging/NSString+Calculation.m"; sourceTree = "<group>"; };
-		09B1B44BF7B354F2FD168DA6 /* SOMessageCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SOMessageCell.m; path = SOMessaging/SOMessageCell.m; sourceTree = "<group>"; };
-		0A08F0F8AFAB90B3E8F50269 /* Pods-ParseTest2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ParseTest2-dummy.m"; sourceTree = "<group>"; };
-		0A70137A1AB417C056DE2FD0 /* SOMessagingDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessagingDelegate.h; path = SOMessaging/SOMessagingDelegate.h; sourceTree = "<group>"; };
-		130657F935A170ECA7B5FE51 /* SOMessagingDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessagingDataSource.h; path = SOMessaging/SOMessagingDataSource.h; sourceTree = "<group>"; };
-		19C28618183C984696FB8BEB /* Pods-ParseTest2-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ParseTest2-resources.sh"; sourceTree = "<group>"; };
-		2855563EC018A368B1D5D77E /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		3184A2F4F5C63FB01CDAB278 /* SOPlaceholderedTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SOPlaceholderedTextView.m; path = SOMessaging/SOPlaceholderedTextView.m; sourceTree = "<group>"; };
-		3999E62767AAEB65DC8ABE27 /* Pods-ParseTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParseTest2.debug.xcconfig"; sourceTree = "<group>"; };
-		400917E42C31AFC0AE6F1173 /* Pods-ParseTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParseTest2.release.xcconfig"; sourceTree = "<group>"; };
-		4450BFE0DCB1881F79C08945 /* SOImageBrowserView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SOImageBrowserView.m; path = SOMessaging/SOImageBrowserView.m; sourceTree = "<group>"; };
-		45DF79D08FACA54063AD0389 /* UINavigationController+Rotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Rotation.m"; path = "SOMessaging/UINavigationController+Rotation.m"; sourceTree = "<group>"; };
-		503F19154B6EC39746AA08BB /* SOMessagingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessagingViewController.h; path = SOMessaging/SOMessagingViewController.h; sourceTree = "<group>"; };
-		6374D69AB9E3BF96FD5D5E23 /* Pods-ParseTest2-SOMessaging-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ParseTest2-SOMessaging-prefix.pch"; sourceTree = "<group>"; };
-		769FCB02076E4465396BDDDA /* SOPlaceholderedTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOPlaceholderedTextView.h; path = SOMessaging/SOPlaceholderedTextView.h; sourceTree = "<group>"; };
-		8010CEDE35C88D1A9D228317 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		851E16E0249D28B8B64CD3D2 /* NSString+Calculation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Calculation.h"; path = "SOMessaging/NSString+Calculation.h"; sourceTree = "<group>"; };
-		8DDBA9103D817BF1B31FE0F2 /* SOMessageType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessageType.h; path = SOMessaging/SOMessageType.h; sourceTree = "<group>"; };
-		96999A1BD960257FD340A545 /* SOMessageInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SOMessageInputView.m; path = SOMessaging/SOMessageInputView.m; sourceTree = "<group>"; };
-		99FBE8CA4955E8589D70A99C /* Pods-ParseTest2-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ParseTest2-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9B1E4FDBD8BCF10493FC5272 /* UINavigationController+Rotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Rotation.h"; path = "SOMessaging/UINavigationController+Rotation.h"; sourceTree = "<group>"; };
-		A0B627AD2B4A0934E2676A29 /* Pods-ParseTest2-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ParseTest2-environment.h"; sourceTree = "<group>"; };
-		A0F1CB0A18D30B2D3D9746CE /* SOImageBrowserView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOImageBrowserView.h; path = SOMessaging/SOImageBrowserView.h; sourceTree = "<group>"; };
-		B095391C3E1EED4C542B39FD /* Pods-ParseTest2-SOMessaging-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ParseTest2-SOMessaging-dummy.m"; sourceTree = "<group>"; };
-		B642FF08137188F2C60AB2D8 /* SOMessageInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessageInputView.h; path = SOMessaging/SOMessageInputView.h; sourceTree = "<group>"; };
-		BD8D7BAB1AB49A7C07EC7AE4 /* SOMessagingViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SOMessagingViewController.m; path = SOMessaging/SOMessagingViewController.m; sourceTree = "<group>"; };
-		DAD66508D892E776092E6763 /* libPods-ParseTest2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParseTest2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA3785B5DBE746B2A0E89644 /* Pods-ParseTest2-SOMessaging-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParseTest2-SOMessaging-Private.xcconfig"; sourceTree = "<group>"; };
-		EAE121029915B1280C11F37A /* SOMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SOMessage.m; path = SOMessaging/SOMessage.m; sourceTree = "<group>"; };
-		F3099A4B98BB5620ECDFB370 /* Pods-ParseTest2-SOMessaging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParseTest2-SOMessaging.xcconfig"; sourceTree = "<group>"; };
-		F89117FC297ED7D5F2B60636 /* SOMessageCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessageCell.h; path = SOMessaging/SOMessageCell.h; sourceTree = "<group>"; };
-		FB6495E48DAAF0E423FEC117 /* SOMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessage.h; path = SOMessaging/SOMessage.h; sourceTree = "<group>"; };
-		FDED26919BC782031376AFF4 /* Pods-ParseTest2-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ParseTest2-acknowledgements.plist"; sourceTree = "<group>"; };
-		FE1AE7448D7D0F76A0F9816E /* libPods-ParseTest2-SOMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParseTest2-SOMessaging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		020299524DE2ED9FEB5F9D74 /* SOMessageInputView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SOMessageInputView.m; path = SOMessaging/SOMessageInputView.m; sourceTree = "<group>"; };
+		07A243973AD2525F59A5C0D7 /* Pods-ParseTest2-SOMessaging-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ParseTest2-SOMessaging-dummy.m"; sourceTree = "<group>"; };
+		095E51A4D925554D83C29CA7 /* libPods-ParseTest2-SOMessaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParseTest2-SOMessaging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11192F5BB291D5E83D839AD0 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		19580172B3820BB95C007ED2 /* Pods-ParseTest2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParseTest2.release.xcconfig"; sourceTree = "<group>"; };
+		1C39046902DD17BDDCB74290 /* Pods-ParseTest2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ParseTest2-dummy.m"; sourceTree = "<group>"; };
+		1CE73D474579D33FD47DE352 /* libPods-ParseTest2-MBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParseTest2-MBProgressHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2656360A40EB8C850B036B32 /* NSString+Calculation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Calculation.h"; path = "SOMessaging/NSString+Calculation.h"; sourceTree = "<group>"; };
+		279A2DF4D3106ECC00F800E5 /* SOMessagingDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessagingDelegate.h; path = SOMessaging/SOMessagingDelegate.h; sourceTree = "<group>"; };
+		29DF3C2769EA6F09A69EB7B2 /* Pods-ParseTest2-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ParseTest2-acknowledgements.plist"; sourceTree = "<group>"; };
+		2C758B35140FEA67E4762AD4 /* SOMessageCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessageCell.h; path = SOMessaging/SOMessageCell.h; sourceTree = "<group>"; };
+		3706C52F9724F0775B422BD2 /* Pods-ParseTest2-SOMessaging-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParseTest2-SOMessaging-Private.xcconfig"; sourceTree = "<group>"; };
+		4ACB07828DE094DD9A9C0A3E /* SOMessageCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SOMessageCell.m; path = SOMessaging/SOMessageCell.m; sourceTree = "<group>"; };
+		597FBAF16E57015A5E2E9AB8 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5E1C2755501709D520E64A52 /* UINavigationController+Rotation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Rotation.m"; path = "SOMessaging/UINavigationController+Rotation.m"; sourceTree = "<group>"; };
+		600624A8E85D18CBCB747B3C /* Pods-ParseTest2-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ParseTest2-resources.sh"; sourceTree = "<group>"; };
+		6209207616D6C0DAB0E0C11F /* Pods-ParseTest2-SOMessaging-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ParseTest2-SOMessaging-prefix.pch"; sourceTree = "<group>"; };
+		631EAD54EC0C7D4ACDA37B42 /* SOMessageInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessageInputView.h; path = SOMessaging/SOMessageInputView.h; sourceTree = "<group>"; };
+		66CFA3D626AD427E38F8D958 /* Pods-ParseTest2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParseTest2.debug.xcconfig"; sourceTree = "<group>"; };
+		7A7C9BDAC1A62A5DA6494899 /* SOMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessage.h; path = SOMessaging/SOMessage.h; sourceTree = "<group>"; };
+		84C5A3A974B0303BF55BB8CA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		91C5D65D9BC36C8B7BCFA8C0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		93569935DE6A56B72DDAE041 /* Pods-ParseTest2-MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParseTest2-MBProgressHUD.xcconfig"; sourceTree = "<group>"; };
+		9E041D9105B16206F77701B4 /* SOImageBrowserView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOImageBrowserView.h; path = SOMessaging/SOImageBrowserView.h; sourceTree = "<group>"; };
+		A27CB855D8E53E52216C091F /* SOMessagingDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessagingDataSource.h; path = SOMessaging/SOMessagingDataSource.h; sourceTree = "<group>"; };
+		AB48F1A62F0CCF83AB201B3D /* Pods-ParseTest2-MBProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParseTest2-MBProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
+		AE8BD850F09B50923586F99E /* NSString+Calculation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Calculation.m"; path = "SOMessaging/NSString+Calculation.m"; sourceTree = "<group>"; };
+		B3208E47D3CE4DD476B1DE3D /* libPods-ParseTest2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ParseTest2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4B35E3F8FAE3FCC31D4FC87 /* Pods-ParseTest2-MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ParseTest2-MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		B7C9156D645C32EA86D105FA /* SOMessagingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessagingViewController.h; path = SOMessaging/SOMessagingViewController.h; sourceTree = "<group>"; };
+		B84E9F2E569349E77A9D80F6 /* Pods-ParseTest2-MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ParseTest2-MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		C77BF831417EA97EC2332607 /* SOImageBrowserView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SOImageBrowserView.m; path = SOMessaging/SOImageBrowserView.m; sourceTree = "<group>"; };
+		CA346872EAB1D38191F3FC83 /* SOPlaceholderedTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SOPlaceholderedTextView.m; path = SOMessaging/SOPlaceholderedTextView.m; sourceTree = "<group>"; };
+		CE2CED7CD85C2EB8EDEE3A93 /* SOMessagingViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SOMessagingViewController.m; path = SOMessaging/SOMessagingViewController.m; sourceTree = "<group>"; };
+		D3D60581D96CFD99AFCC832E /* SOPlaceholderedTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOPlaceholderedTextView.h; path = SOMessaging/SOPlaceholderedTextView.h; sourceTree = "<group>"; };
+		D60D863953677E220F5816AB /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		D665160E88B3EF5AD54F2534 /* Pods-ParseTest2-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ParseTest2-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D7D97A841706823B5BA4F1E4 /* SOMessageType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SOMessageType.h; path = SOMessaging/SOMessageType.h; sourceTree = "<group>"; };
+		E1B9FA1EDE1656D9CED32709 /* SOMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SOMessage.m; path = SOMessaging/SOMessage.m; sourceTree = "<group>"; };
+		E3985CDB669F4F0923A494E2 /* Pods-ParseTest2-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ParseTest2-environment.h"; sourceTree = "<group>"; };
+		EF2B4713EEA4FA2CFE82DC06 /* Pods-ParseTest2-SOMessaging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParseTest2-SOMessaging.xcconfig"; sourceTree = "<group>"; };
+		F749D8EBFAA976DBDB03DD00 /* UINavigationController+Rotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Rotation.h"; path = "SOMessaging/UINavigationController+Rotation.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		163D49A7A04A5C30E8C28164 /* Frameworks */ = {
+		0DEBB10080066C30D27EFDFA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				495BBDAE78568438D5265850 /* Foundation.framework in Frameworks */,
+				E7B24391B86C43DF44AFDF24 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		90CC016057DB78EF64D49926 /* Frameworks */ = {
+		25AC0510E11C1A2576CC0509 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0AAA889454461C55A1B5FFF /* Foundation.framework in Frameworks */,
+				E887D6684CE80414A814E621 /* CoreGraphics.framework in Frameworks */,
+				20EE1C465A9D11A733B3B410 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14970B639B35A0AE0661537 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0C02F737C0ACD3EAD64EDF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F203A8FCECB146826E037B9 /* Targets Support Files */ = {
+		01D2CAD123D7566D2704CBEC /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2FC8962ECDD586940A4C3817 /* Pods-ParseTest2 */,
+				AE3B28D1D509D1AECE4054F1 /* Pods-ParseTest2 */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		23E5F6F0F08D7E5260CD8C4C /* Products */ = {
+		08582AEFD0603F0F9AFFFDF5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DAD66508D892E776092E6763 /* libPods-ParseTest2.a */,
-				FE1AE7448D7D0F76A0F9816E /* libPods-ParseTest2-SOMessaging.a */,
+				93569935DE6A56B72DDAE041 /* Pods-ParseTest2-MBProgressHUD.xcconfig */,
+				AB48F1A62F0CCF83AB201B3D /* Pods-ParseTest2-MBProgressHUD-Private.xcconfig */,
+				B84E9F2E569349E77A9D80F6 /* Pods-ParseTest2-MBProgressHUD-dummy.m */,
+				B4B35E3F8FAE3FCC31D4FC87 /* Pods-ParseTest2-MBProgressHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-ParseTest2-MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		094EAA5A76A8F7A20937A330 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				91C5D65D9BC36C8B7BCFA8C0 /* CoreGraphics.framework */,
+				84C5A3A974B0303BF55BB8CA /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1EE5A2D10DDC7F0CD44D5699 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3208E47D3CE4DD476B1DE3D /* libPods-ParseTest2.a */,
+				1CE73D474579D33FD47DE352 /* libPods-ParseTest2-MBProgressHUD.a */,
+				095E51A4D925554D83C29CA7 /* libPods-ParseTest2-SOMessaging.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2FC8962ECDD586940A4C3817 /* Pods-ParseTest2 */ = {
+		26A033959255CFCD910F4463 = {
 			isa = PBXGroup;
 			children = (
-				99FBE8CA4955E8589D70A99C /* Pods-ParseTest2-acknowledgements.markdown */,
-				FDED26919BC782031376AFF4 /* Pods-ParseTest2-acknowledgements.plist */,
-				0A08F0F8AFAB90B3E8F50269 /* Pods-ParseTest2-dummy.m */,
-				A0B627AD2B4A0934E2676A29 /* Pods-ParseTest2-environment.h */,
-				19C28618183C984696FB8BEB /* Pods-ParseTest2-resources.sh */,
-				3999E62767AAEB65DC8ABE27 /* Pods-ParseTest2.debug.xcconfig */,
-				400917E42C31AFC0AE6F1173 /* Pods-ParseTest2.release.xcconfig */,
-			);
-			name = "Pods-ParseTest2";
-			path = "Target Support Files/Pods-ParseTest2";
-			sourceTree = "<group>";
-		};
-		72C81DB06C13F84091ACC8E6 = {
-			isa = PBXGroup;
-			children = (
-				2855563EC018A368B1D5D77E /* Podfile */,
-				DB59EC729F0FF135B4841DD9 /* Frameworks */,
-				C16687F7666657988FB15231 /* Pods */,
-				23E5F6F0F08D7E5260CD8C4C /* Products */,
-				0F203A8FCECB146826E037B9 /* Targets Support Files */,
+				597FBAF16E57015A5E2E9AB8 /* Podfile */,
+				82E7158A141A05D07587F06B /* Frameworks */,
+				C6849F3297D88EDC6E3BDE84 /* Pods */,
+				1EE5A2D10DDC7F0CD44D5699 /* Products */,
+				01D2CAD123D7566D2704CBEC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		74C7EADA5D87FB68BD56F08F /* SOMessaging */ = {
+		3C4CBB004C81AD79E0A3D7AB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				851E16E0249D28B8B64CD3D2 /* NSString+Calculation.h */,
-				05BD10B72772C1264D135BC3 /* NSString+Calculation.m */,
-				A0F1CB0A18D30B2D3D9746CE /* SOImageBrowserView.h */,
-				4450BFE0DCB1881F79C08945 /* SOImageBrowserView.m */,
-				FB6495E48DAAF0E423FEC117 /* SOMessage.h */,
-				EAE121029915B1280C11F37A /* SOMessage.m */,
-				F89117FC297ED7D5F2B60636 /* SOMessageCell.h */,
-				09B1B44BF7B354F2FD168DA6 /* SOMessageCell.m */,
-				B642FF08137188F2C60AB2D8 /* SOMessageInputView.h */,
-				96999A1BD960257FD340A545 /* SOMessageInputView.m */,
-				8DDBA9103D817BF1B31FE0F2 /* SOMessageType.h */,
-				130657F935A170ECA7B5FE51 /* SOMessagingDataSource.h */,
-				0A70137A1AB417C056DE2FD0 /* SOMessagingDelegate.h */,
-				503F19154B6EC39746AA08BB /* SOMessagingViewController.h */,
-				BD8D7BAB1AB49A7C07EC7AE4 /* SOMessagingViewController.m */,
-				769FCB02076E4465396BDDDA /* SOPlaceholderedTextView.h */,
-				3184A2F4F5C63FB01CDAB278 /* SOPlaceholderedTextView.m */,
-				9B1E4FDBD8BCF10493FC5272 /* UINavigationController+Rotation.h */,
-				45DF79D08FACA54063AD0389 /* UINavigationController+Rotation.m */,
-				7B9E9958FE7A3EE5BA8A1404 /* Support Files */,
-			);
-			path = SOMessaging;
-			sourceTree = "<group>";
-		};
-		7B9E9958FE7A3EE5BA8A1404 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F3099A4B98BB5620ECDFB370 /* Pods-ParseTest2-SOMessaging.xcconfig */,
-				EA3785B5DBE746B2A0E89644 /* Pods-ParseTest2-SOMessaging-Private.xcconfig */,
-				B095391C3E1EED4C542B39FD /* Pods-ParseTest2-SOMessaging-dummy.m */,
-				6374D69AB9E3BF96FD5D5E23 /* Pods-ParseTest2-SOMessaging-prefix.pch */,
+				EF2B4713EEA4FA2CFE82DC06 /* Pods-ParseTest2-SOMessaging.xcconfig */,
+				3706C52F9724F0775B422BD2 /* Pods-ParseTest2-SOMessaging-Private.xcconfig */,
+				07A243973AD2525F59A5C0D7 /* Pods-ParseTest2-SOMessaging-dummy.m */,
+				6209207616D6C0DAB0E0C11F /* Pods-ParseTest2-SOMessaging-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-ParseTest2-SOMessaging";
 			sourceTree = "<group>";
 		};
-		C16687F7666657988FB15231 /* Pods */ = {
+		82E7158A141A05D07587F06B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				74C7EADA5D87FB68BD56F08F /* SOMessaging */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		DB59EC729F0FF135B4841DD9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E65A829B3694B0DD2220264C /* iOS */,
+				094EAA5A76A8F7A20937A330 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E65A829B3694B0DD2220264C /* iOS */ = {
+		AE3B28D1D509D1AECE4054F1 /* Pods-ParseTest2 */ = {
 			isa = PBXGroup;
 			children = (
-				8010CEDE35C88D1A9D228317 /* Foundation.framework */,
+				D665160E88B3EF5AD54F2534 /* Pods-ParseTest2-acknowledgements.markdown */,
+				29DF3C2769EA6F09A69EB7B2 /* Pods-ParseTest2-acknowledgements.plist */,
+				1C39046902DD17BDDCB74290 /* Pods-ParseTest2-dummy.m */,
+				E3985CDB669F4F0923A494E2 /* Pods-ParseTest2-environment.h */,
+				600624A8E85D18CBCB747B3C /* Pods-ParseTest2-resources.sh */,
+				66CFA3D626AD427E38F8D958 /* Pods-ParseTest2.debug.xcconfig */,
+				19580172B3820BB95C007ED2 /* Pods-ParseTest2.release.xcconfig */,
 			);
-			name = iOS;
+			name = "Pods-ParseTest2";
+			path = "Target Support Files/Pods-ParseTest2";
+			sourceTree = "<group>";
+		};
+		C6849F3297D88EDC6E3BDE84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5EDC6924DBA8AE77F3B470B /* MBProgressHUD */,
+				DCE4075E529E98928870FF6C /* SOMessaging */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DCE4075E529E98928870FF6C /* SOMessaging */ = {
+			isa = PBXGroup;
+			children = (
+				2656360A40EB8C850B036B32 /* NSString+Calculation.h */,
+				AE8BD850F09B50923586F99E /* NSString+Calculation.m */,
+				9E041D9105B16206F77701B4 /* SOImageBrowserView.h */,
+				C77BF831417EA97EC2332607 /* SOImageBrowserView.m */,
+				7A7C9BDAC1A62A5DA6494899 /* SOMessage.h */,
+				E1B9FA1EDE1656D9CED32709 /* SOMessage.m */,
+				2C758B35140FEA67E4762AD4 /* SOMessageCell.h */,
+				4ACB07828DE094DD9A9C0A3E /* SOMessageCell.m */,
+				631EAD54EC0C7D4ACDA37B42 /* SOMessageInputView.h */,
+				020299524DE2ED9FEB5F9D74 /* SOMessageInputView.m */,
+				D7D97A841706823B5BA4F1E4 /* SOMessageType.h */,
+				A27CB855D8E53E52216C091F /* SOMessagingDataSource.h */,
+				279A2DF4D3106ECC00F800E5 /* SOMessagingDelegate.h */,
+				B7C9156D645C32EA86D105FA /* SOMessagingViewController.h */,
+				CE2CED7CD85C2EB8EDEE3A93 /* SOMessagingViewController.m */,
+				D3D60581D96CFD99AFCC832E /* SOPlaceholderedTextView.h */,
+				CA346872EAB1D38191F3FC83 /* SOPlaceholderedTextView.m */,
+				F749D8EBFAA976DBDB03DD00 /* UINavigationController+Rotation.h */,
+				5E1C2755501709D520E64A52 /* UINavigationController+Rotation.m */,
+				3C4CBB004C81AD79E0A3D7AB /* Support Files */,
+			);
+			path = SOMessaging;
+			sourceTree = "<group>";
+		};
+		F5EDC6924DBA8AE77F3B470B /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				D60D863953677E220F5816AB /* MBProgressHUD.h */,
+				11192F5BB291D5E83D839AD0 /* MBProgressHUD.m */,
+				08582AEFD0603F0F9AFFFDF5 /* Support Files */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4CE1FB75062760D59AC74086 /* Headers */ = {
+		1022203BAA354B9BC5C2DEED /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C80D49566FF5789D92BD2C4 /* NSString+Calculation.h in Headers */,
-				D997E6BD68533108BCABBE3E /* SOImageBrowserView.h in Headers */,
-				1A40E276C784E2AE9B483CCD /* SOMessage.h in Headers */,
-				78355E77E6D7C0FE314BC4ED /* SOMessageCell.h in Headers */,
-				F5C1ABD850B05CCB8C84F752 /* SOMessageInputView.h in Headers */,
-				3E5F5AA7217A7C0A11483ED1 /* SOMessageType.h in Headers */,
-				004F418CA47734CD80A26795 /* SOMessagingDataSource.h in Headers */,
-				89B0430AD1E73C264EDFB977 /* SOMessagingDelegate.h in Headers */,
-				E3467223F166D3F128C0F7E0 /* SOMessagingViewController.h in Headers */,
-				B21813B09A027515207BA757 /* SOPlaceholderedTextView.h in Headers */,
-				FD24707B0A8E2EF50F0A1511 /* UINavigationController+Rotation.h in Headers */,
+				B463CED0E08C9A3F4558ACE4 /* MBProgressHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68FEED9929959CE96D82F906 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFC622725E8C41D08F0619C1 /* NSString+Calculation.h in Headers */,
+				B49A4268412953630610CC93 /* SOImageBrowserView.h in Headers */,
+				D99206944BEE56ABA4123010 /* SOMessage.h in Headers */,
+				3A956E896F82C1F9180FC623 /* SOMessageCell.h in Headers */,
+				FEF53A48A456FE6FEEA99AAB /* SOMessageInputView.h in Headers */,
+				7E93F3FE848DD7E68F568C2B /* SOMessageType.h in Headers */,
+				B9311439286A40908E456F61 /* SOMessagingDataSource.h in Headers */,
+				C5985D2B4CDA55F85BA09557 /* SOMessagingDelegate.h in Headers */,
+				C251692DF7EA79E119494F99 /* SOMessagingViewController.h in Headers */,
+				E99F6E2E38CE0680421A4FB4 /* SOPlaceholderedTextView.h in Headers */,
+				FF221ED042186BF88D2A354C /* UINavigationController+Rotation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0D19575BB4181B8C661161A1 /* Pods-ParseTest2-SOMessaging */ = {
+		0ACFDC1EB2A8CC7405B00620 /* Pods-ParseTest2-MBProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A2E3C3F9F7D9A03E3590FAD4 /* Build configuration list for PBXNativeTarget "Pods-ParseTest2-SOMessaging" */;
+			buildConfigurationList = 900A9486C21E14C4D082C78C /* Build configuration list for PBXNativeTarget "Pods-ParseTest2-MBProgressHUD" */;
 			buildPhases = (
-				7300A50D5D21BB50C5ACF210 /* Sources */,
-				163D49A7A04A5C30E8C28164 /* Frameworks */,
-				4CE1FB75062760D59AC74086 /* Headers */,
+				6E8FABD83CFF347BC841370F /* Sources */,
+				25AC0510E11C1A2576CC0509 /* Frameworks */,
+				1022203BAA354B9BC5C2DEED /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ParseTest2-MBProgressHUD";
+			productName = "Pods-ParseTest2-MBProgressHUD";
+			productReference = 1CE73D474579D33FD47DE352 /* libPods-ParseTest2-MBProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		877C6F7DC8E1D7166654BA84 /* Pods-ParseTest2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93EA50A7174B4E754FAF330A /* Build configuration list for PBXNativeTarget "Pods-ParseTest2" */;
+			buildPhases = (
+				D824C622FCCABDFB320525AF /* Sources */,
+				E14970B639B35A0AE0661537 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74D7FD405A12E634A432E68E /* PBXTargetDependency */,
+				333D65EAC0FC094C2059D627 /* PBXTargetDependency */,
+			);
+			name = "Pods-ParseTest2";
+			productName = "Pods-ParseTest2";
+			productReference = B3208E47D3CE4DD476B1DE3D /* libPods-ParseTest2.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CB6AD343FB7486CADF25EBF0 /* Pods-ParseTest2-SOMessaging */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C850FA2F8673E06D5AD217BD /* Build configuration list for PBXNativeTarget "Pods-ParseTest2-SOMessaging" */;
+			buildPhases = (
+				1B53CF8AEF320834EC2A6929 /* Sources */,
+				0DEBB10080066C30D27EFDFA /* Frameworks */,
+				68FEED9929959CE96D82F906 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -243,130 +340,111 @@
 			);
 			name = "Pods-ParseTest2-SOMessaging";
 			productName = "Pods-ParseTest2-SOMessaging";
-			productReference = FE1AE7448D7D0F76A0F9816E /* libPods-ParseTest2-SOMessaging.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		FA954A3D0409AA4C21BE187E /* Pods-ParseTest2 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C85AC2D79BD265D119B693D1 /* Build configuration list for PBXNativeTarget "Pods-ParseTest2" */;
-			buildPhases = (
-				10942DEBF5158F6DC850D796 /* Sources */,
-				90CC016057DB78EF64D49926 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B54D7A53A3C159CC407C9B24 /* PBXTargetDependency */,
-			);
-			name = "Pods-ParseTest2";
-			productName = "Pods-ParseTest2";
-			productReference = DAD66508D892E776092E6763 /* libPods-ParseTest2.a */;
+			productReference = 095E51A4D925554D83C29CA7 /* libPods-ParseTest2-SOMessaging.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F274929AC54E5CC9B5BD14AF /* Project object */ = {
+		221E1492510A5B0F1F81ECB0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 9A339FE39E21D496909AF39A /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 31B8660AC6259528B6FF5966 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 72C81DB06C13F84091ACC8E6;
-			productRefGroup = 23E5F6F0F08D7E5260CD8C4C /* Products */;
+			mainGroup = 26A033959255CFCD910F4463;
+			productRefGroup = 1EE5A2D10DDC7F0CD44D5699 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA954A3D0409AA4C21BE187E /* Pods-ParseTest2 */,
-				0D19575BB4181B8C661161A1 /* Pods-ParseTest2-SOMessaging */,
+				877C6F7DC8E1D7166654BA84 /* Pods-ParseTest2 */,
+				0ACFDC1EB2A8CC7405B00620 /* Pods-ParseTest2-MBProgressHUD */,
+				CB6AD343FB7486CADF25EBF0 /* Pods-ParseTest2-SOMessaging */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		10942DEBF5158F6DC850D796 /* Sources */ = {
+		1B53CF8AEF320834EC2A6929 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED2FE37127F430FC047317D0 /* Pods-ParseTest2-dummy.m in Sources */,
+				5E08840642D7EA5E0E9843C5 /* NSString+Calculation.m in Sources */,
+				BD5826845F9F765A569E4379 /* Pods-ParseTest2-SOMessaging-dummy.m in Sources */,
+				447B0B850B7E885361641E10 /* SOImageBrowserView.m in Sources */,
+				238D3A1B78E93A77F32D7FB9 /* SOMessage.m in Sources */,
+				5AAA6EF400C72F6B51FBD8DC /* SOMessageCell.m in Sources */,
+				65FA589AF11E3BF5D4143501 /* SOMessageInputView.m in Sources */,
+				AB267B76B2ECF822D5034EC5 /* SOMessagingViewController.m in Sources */,
+				37423C2EB15A6477C7C78B74 /* SOPlaceholderedTextView.m in Sources */,
+				DDBC59F0DCD3676FFDF89FA9 /* UINavigationController+Rotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7300A50D5D21BB50C5ACF210 /* Sources */ = {
+		6E8FABD83CFF347BC841370F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1765662D1F365E72EF3F36 /* NSString+Calculation.m in Sources */,
-				53B0D058B9AA9C753B29D1AF /* Pods-ParseTest2-SOMessaging-dummy.m in Sources */,
-				46274FCC578590CBDFBFAE8A /* SOImageBrowserView.m in Sources */,
-				893F953FD967E013DEEB6903 /* SOMessage.m in Sources */,
-				07035FFEFBE05390D5167894 /* SOMessageCell.m in Sources */,
-				A2CAF173315500F8A44B00F9 /* SOMessageInputView.m in Sources */,
-				1BF97087C98655213A77F6D9 /* SOMessagingViewController.m in Sources */,
-				8FEDFC9B07F2509BEBBE0FC5 /* SOPlaceholderedTextView.m in Sources */,
-				1C9F17A9ED8095DB0CBF7ABA /* UINavigationController+Rotation.m in Sources */,
+				7BF2A37062951CE6E6C13B7F /* MBProgressHUD.m in Sources */,
+				0FAF81F73D6674D531ACDAC4 /* Pods-ParseTest2-MBProgressHUD-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D824C622FCCABDFB320525AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D99CC2753526392EED4AC7E2 /* Pods-ParseTest2-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B54D7A53A3C159CC407C9B24 /* PBXTargetDependency */ = {
+		333D65EAC0FC094C2059D627 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ParseTest2-SOMessaging";
-			target = 0D19575BB4181B8C661161A1 /* Pods-ParseTest2-SOMessaging */;
-			targetProxy = 3233B62FEA9F0B36C8196755 /* PBXContainerItemProxy */;
+			target = CB6AD343FB7486CADF25EBF0 /* Pods-ParseTest2-SOMessaging */;
+			targetProxy = B259A7582A6C6B50E0E9A0DC /* PBXContainerItemProxy */;
+		};
+		74D7FD405A12E634A432E68E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ParseTest2-MBProgressHUD";
+			target = 0ACFDC1EB2A8CC7405B00620 /* Pods-ParseTest2-MBProgressHUD */;
+			targetProxy = 7B3025BB683C1A51D54D76D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0C3918423C2E89B71FA9E663 /* Release */ = {
+		2CBB5E7C25D6DDA76A9E2202 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB48F1A62F0CCF83AB201B3D /* Pods-ParseTest2-MBProgressHUD-Private.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ParseTest2-MBProgressHUD/Pods-ParseTest2-MBProgressHUD-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		2E9FFB101DA0A75DEF18786C /* Debug */ = {
+		440D302E14230313B41410E7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3999E62767AAEB65DC8ABE27 /* Pods-ParseTest2.debug.xcconfig */;
+			baseConfigurationReference = 19580172B3820BB95C007ED2 /* Pods-ParseTest2.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -374,11 +452,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		6EE89786FC8E55CBC61FF369 /* Debug */ = {
+		4EE0D063340C0C691CA1CD39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA3785B5DBE746B2A0E89644 /* Pods-ParseTest2-SOMessaging-Private.xcconfig */;
+			baseConfigurationReference = 3706C52F9724F0775B422BD2 /* Pods-ParseTest2-SOMessaging-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-ParseTest2-SOMessaging/Pods-ParseTest2-SOMessaging-prefix.pch";
@@ -392,7 +470,23 @@
 			};
 			name = Debug;
 		};
-		97CF7B80E07D9B439053A490 /* Debug */ = {
+		5804DA16D97C6A842C6064E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3706C52F9724F0775B422BD2 /* Pods-ParseTest2-SOMessaging-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ParseTest2-SOMessaging/Pods-ParseTest2-SOMessaging-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5FFD222D32182C592C243AD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -431,13 +525,29 @@
 			};
 			name = Debug;
 		};
-		AC7904E8C1A92A343616E8F9 /* Release */ = {
+		7309DA22D6C49102FBD1EBFF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 400917E42C31AFC0AE6F1173 /* Pods-ParseTest2.release.xcconfig */;
+			baseConfigurationReference = AB48F1A62F0CCF83AB201B3D /* Pods-ParseTest2-MBProgressHUD-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ParseTest2-MBProgressHUD/Pods-ParseTest2-MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		763C67F0BCA4CA8E8705C95E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66CFA3D626AD427E38F8D958 /* Pods-ParseTest2.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -445,55 +555,82 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		B2D32C5A2A5BD69EE1074BAC /* Release */ = {
+		B52D339E2807ECE563C55BD4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA3785B5DBE746B2A0E89644 /* Pods-ParseTest2-SOMessaging-Private.xcconfig */;
 			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-ParseTest2-SOMessaging/Pods-ParseTest2-SOMessaging-prefix.pch";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9A339FE39E21D496909AF39A /* Build configuration list for PBXProject "Pods" */ = {
+		31B8660AC6259528B6FF5966 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				97CF7B80E07D9B439053A490 /* Debug */,
-				0C3918423C2E89B71FA9E663 /* Release */,
+				5FFD222D32182C592C243AD9 /* Debug */,
+				B52D339E2807ECE563C55BD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A2E3C3F9F7D9A03E3590FAD4 /* Build configuration list for PBXNativeTarget "Pods-ParseTest2-SOMessaging" */ = {
+		900A9486C21E14C4D082C78C /* Build configuration list for PBXNativeTarget "Pods-ParseTest2-MBProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6EE89786FC8E55CBC61FF369 /* Debug */,
-				B2D32C5A2A5BD69EE1074BAC /* Release */,
+				2CBB5E7C25D6DDA76A9E2202 /* Debug */,
+				7309DA22D6C49102FBD1EBFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C85AC2D79BD265D119B693D1 /* Build configuration list for PBXNativeTarget "Pods-ParseTest2" */ = {
+		93EA50A7174B4E754FAF330A /* Build configuration list for PBXNativeTarget "Pods-ParseTest2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2E9FFB101DA0A75DEF18786C /* Debug */,
-				AC7904E8C1A92A343616E8F9 /* Release */,
+				763C67F0BCA4CA8E8705C95E /* Debug */,
+				440D302E14230313B41410E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C850FA2F8673E06D5AD217BD /* Build configuration list for PBXNativeTarget "Pods-ParseTest2-SOMessaging" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EE0D063340C0C691CA1CD39 /* Debug */,
+				5804DA16D97C6A842C6064E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F274929AC54E5CC9B5BD14AF /* Project object */;
+	rootObject = 221E1492510A5B0F1F81ECB0 /* Project object */;
 }

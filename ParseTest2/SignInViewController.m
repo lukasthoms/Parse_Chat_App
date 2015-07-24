@@ -59,37 +59,14 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//    [PFUser logInWithUsernameInBackground:self.emailField.text password:self.passwordField.text block:^(PFUser *user, NSError *error) {
-//        if (user) {
-//            NSLog(@"Successful Login");
-////            ChattrNavigationViewController *chattrNavController = [[ChattrNavigationViewController alloc] init];
-//            //            ContactsViewController *contactsViewController = [[ContactsViewController alloc] init];
-////            [self presentViewController:chattrNavController animated:YES completion:nil];
-//            //            [chattrNavController pushViewController:contactsViewController animated:YES];
-//            
-//            
-//        } else {
-//            NSLog(@"Error: %@", error.description);
-//            NSString *errorString = [error userInfo][@"error"];
-//            if ([errorString isEqual:@"invalid login parameters"]) {
-//                errorString = @"Either your username or password is wrong. Please try again.";
-//            };
-//            UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) { }];
-//            UIAlertController *failedSignUp = [UIAlertController alertControllerWithTitle:@"Sign in failed." message:errorString preferredStyle:UIAlertControllerStyleAlert];
-//            [failedSignUp addAction:ok];
-//            [self presentViewController:failedSignUp animated:YES completion:nil];
-//        }
-//    }];
+
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     BOOL isValid = YES;
     if ([sender isEqual:self.loginButton]) {
-    
+        // perform Parse sign in and segue if successful, else fail and present alert
         NSError *error = nil;
         [PFUser logInWithUsername:self.emailField.text password:self.passwordField.text error:&error];
         NSLog(@"Error: %@", error.description);

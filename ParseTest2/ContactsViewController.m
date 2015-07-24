@@ -42,23 +42,22 @@
 
 -(void) viewWillAppear:(BOOL)animated {
     
+    //subscribe to pushes
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveTestNotification:)
                                                  name:@"NewMessage"
                                                object:nil];
     
-    
+    //subscribe to user's Parse Push channel
     NSString *channelSpeller = [NSString stringWithFormat:@"user_%@", [[PFUser currentUser] email]];
     NSCharacterSet *chs = [NSCharacterSet characterSetWithCharactersInString:@"'#%^&{}[]/~|\?.<,@"];
     NSString *userChannel = [[channelSpeller componentsSeparatedByCharactersInSet:chs] componentsJoinedByString:@""];
     NSLog(@"User channel to set: %@", userChannel);
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     
-    NSLog(@"Channels: %@", currentInstallation.channels);
     
     [currentInstallation addUniqueObject:userChannel forKey:@"channels"];
     [currentInstallation saveEventually];
-    NSLog(@"Channels: %@", currentInstallation.channels);
 
     [self refreshContactRequests];
     
@@ -83,12 +82,11 @@
     
 }
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     
+    // build me some contacts cells
     if ([self.userContacts isEqual:@[]]) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"noContactsCell" forIndexPath:indexPath];
         cell.textLabel.text = @"Tap the + to add contacts.";
@@ -116,9 +114,10 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    //send selected user to ChattrMessagesViewCongroller to handle creation of the chat room
     if ([[sender class] isEqual:[ContactTableViewCell class]]) {
         ContactTableViewCell *sendingCell = sender;
         NSIndexPath *indexPath = [self.contactsTableView indexPathForCell:sendingCell];
@@ -129,8 +128,7 @@
 
 -(void) refreshContactRequests {
     
-    
-    
+    //this method is pretty well named.
     PFUser *currentUser = [PFUser currentUser];
     PFQuery *requestsQuery = [PFQuery queryWithClassName:@"contactRequest"];
     [requestsQuery whereKey:@"requestTo" equalTo:currentUser];
@@ -148,10 +146,14 @@
 
 
 - (IBAction)requestsButtonTapped:(id)sender {
+    
+    //load contact requests
     for (PFObject *contactRequest in self.contactRequests) {
         PFUser *requestingUser = contactRequest[@"requestFrom"];
         [requestingUser fetchIfNeeded];
         PFUser *currentUser = [PFUser currentUser];
+        
+        //display contact requests and add them if approved
         NSString *requestAlertTitle = [NSString stringWithFormat:@"%@ is requesting you add them as a contact.", requestingUser.email];
         UIAlertController *requestChooser = [UIAlertController alertControllerWithTitle:requestAlertTitle
                                                                                 message:@"What would you like to do?"

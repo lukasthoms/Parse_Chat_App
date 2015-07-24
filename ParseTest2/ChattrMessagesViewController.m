@@ -46,11 +46,13 @@
 
 -(void) viewWillAppear:(BOOL)animated {
     
+    //retrieve messages using roomIdenfier
     PFQuery *messagesQuery = [PFQuery queryWithClassName:@"Message"];
     [messagesQuery whereKey:@"roomIdentifier" equalTo:self.roomIdentifier];
     NSError *error = nil;
     NSArray *queryResults = [messagesQuery findObjects:&error];
     
+    //convert PFObjects to SOMessages and display
     NSMutableArray *convertedMessages = [self convertToSOMessageArray:queryResults];
     self.dataStore = convertedMessages;
     if ([self.dataStore isEqual:[@[]mutableCopy]]) {
@@ -62,6 +64,7 @@
     }
     [self refreshMessages];
     
+    //covert all unread messages to read status
     PFQuery *unreadQuery = [PFQuery queryWithClassName:@"Message"];
     [unreadQuery whereKey:@"read" equalTo:@"no"];
     [unreadQuery whereKey:@"roomIdentifier" equalTo:self.roomIdentifier];
@@ -76,7 +79,7 @@
         }
     }];
     
-    
+    //start listening for new messages
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveTestNotification:)
                                                  name:@"NewMessage"
@@ -89,17 +92,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSMutableArray *)messages {
-    
-    return self.dataStore;
+-(void)viewDidDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"NewMessage" object:nil];
+}
 
+- (NSMutableArray *)messages {
+    //provide SOMessageView with messages array loaded in ViewDidLoad
+    return self.dataStore;
 }
 
 - (void)configureMessageCell:(SOMessageCell *)cell forMessageAtIndex:(NSInteger)index
 {
     SOMessage *message = self.dataStore[index];
     
-    // Customize balloon as you wish
+    // Customize balloon
     if (message.fromMe) {
         cell.contentInsets = UIEdgeInsetsMake(0, 3.0f, 0, 0); //Move content for 3 pt. to right
         cell.textView.textColor = [UIColor blackColor];
@@ -122,10 +128,12 @@
         return;
     }
     
+    // create new SOMessage
     SOMessage *msg = [[SOMessage alloc] init];
     msg.text = message;
     msg.fromMe = YES;
     
+    //create PFObject with Message class and save.
     PFObject *messageObject = [PFObject objectWithClassName:@"Message"];
     messageObject[@"content"] = msg.text;
     messageObject[@"sendingUserEmail"] = self.currentUser.email;
@@ -151,7 +159,7 @@
 }
 
 -(NSString *)getRoomIdentifier {
-    
+    //create unique identifier for conversation (the "Room"), ensuring the both clients generate the same identifer using a simple sort
     NSSortDescriptor *sorter = [[NSSortDescriptor alloc] initWithKey:@"email" ascending:YES];
     NSArray *users = @[self.recievingUser, [PFUser currentUser]];
     NSArray *sortedUsers = [users sortedArrayUsingDescriptors:@[sorter]];
@@ -163,6 +171,7 @@
 
 -(NSMutableArray *) convertToSOMessageArray: (NSArray*)parseMessages {
     
+    //this method name is pretty self-explainitory tbh
     NSMutableArray *convertedMessages = [@[]mutableCopy];
     for (PFObject *message in parseMessages) {
         SOMessage *convertedMessage = [[SOMessage alloc] init];
@@ -190,10 +199,8 @@
 
 - (void) receiveTestNotification:(NSNotification *) notification
 {
-    // [notification name] should always be @"TestNotification"
-    // unless you use this method for observation of other notifications
-    // as well.
-
+    // receive notification of a new message and retrieve it from Parse
+    
     if ([[notification name] isEqualToString:@"NewMessage"]) {
             PFQuery *messagesQuery = [PFQuery queryWithClassName:@"Message"];
             [messagesQuery whereKey:@"roomIdentifier" equalTo:self.roomIdentifier];

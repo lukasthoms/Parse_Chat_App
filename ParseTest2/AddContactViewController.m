@@ -30,6 +30,7 @@
 }
 - (IBAction)addButtonTapped:(id)sender {
     
+    // check for which search parameter is selected and set the parse query as such
     PFQuery *phoneQuery = [PFUser query];
     if (self.searchControl.selectedSegmentIndex == 0) {
         NSString *cleanPhone = [self phoneFormat:self.searchField.text];
@@ -39,9 +40,11 @@
     } else {
         NSLog(@"That didn't work :(");
     }
-
+    
+    //run parse query with above parameters
     [phoneQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error)
      {   NSLog(@"Error: %@", error.description);
+         //if the query returns a single result, convert that result into a request and send a push notification to the other user confirming that they're both friends
          if (objects.count == 1) {
              PFUser *user = [PFUser currentUser];
              NSMutableArray *newContactArray = user[@"contacts"];
@@ -60,7 +63,7 @@
              [contactRequestMessage saveInBackground];
              
 
-             
+             //save it, and present a message to either add more or finish
              [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                  if (succeeded) {
                      UIAlertController *saving = [UIAlertController alertControllerWithTitle:@"Contact Added" message:nil preferredStyle:UIAlertControllerStyleAlert];
@@ -103,19 +106,11 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 -(NSString *) phoneFormat: (NSString*) userPhone {
     
-//    NSString *channelSpeller = [NSString stringWithFormat:@"%@", userPhone];
+    //format phone numbers in a common format
     NSCharacterSet *chs = [NSCharacterSet characterSetWithCharactersInString:@"'#%^&{}[]()/~|\?.<,@-"];
     NSString *userChannel = [[userPhone componentsSeparatedByCharactersInSet:chs] componentsJoinedByString:@""];
     return userChannel;
@@ -124,6 +119,7 @@
 
 -(NSString *) channelFormat: (NSString*) userEmail {
     
+    //format channel correctly for Parse Push
     NSString *channelSpeller = [NSString stringWithFormat:@"user_%@", userEmail];
     NSCharacterSet *chs = [NSCharacterSet characterSetWithCharactersInString:@"'#%^&{}[]/~|\?.<,@"];
     NSString *userChannel = [[channelSpeller componentsSeparatedByCharactersInSet:chs] componentsJoinedByString:@""];

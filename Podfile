@@ -3,7 +3,8 @@
 
 target 'ParseTest2' do
 
-pod "SOMessaging", "~> 1.0.0”pod 
+pod "SOMessaging", "~> 1.0.0"
+pod 'MBProgressHUD', '~> 0.9.1'
 
 end
 
